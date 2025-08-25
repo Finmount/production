@@ -14,7 +14,7 @@ const WhatsAppBubble: React.FC = () => {
   }, []);
 
   const handleClick = () => {
-    window.open('https://wa.me/353874905010', '_blank');
+    window.open('https://wa.me/0874905010', '_blank');
   };
 
   return (
