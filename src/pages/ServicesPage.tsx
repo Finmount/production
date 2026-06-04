@@ -128,6 +128,62 @@ const ServicesPage: React.FC = () => {
         'Expense guidance & record-keeping',
         'Dedicated support for queries'
       ]
+    },
+    {
+      title: 'Business Registration Services',
+      path: '/contact',
+      icon: Building2,
+      description: 'Company registration, sole trader registration, VAT registration and business setup support.',
+      included: [
+        'Company Registration',
+        'Sole Trader Registration',
+        'VAT Registration',
+        'Trading Name Registration',
+        'Business Consultancy',
+        'Startup Guidance'
+      ]
+    },
+    {
+      title: 'Employment Permit Services',
+      path: '/contact',
+      icon: Users,
+      description: 'Support with employment permits, work permits and immigration-related business requirements.',
+      included: [
+        'Employment Permit Applications',
+        'Critical Skills Employment Permit',
+        'General Employment Permit',
+        'Work Visa Assistance',
+        'Document Preparation',
+        'Application Support'
+      ]
+    },
+    {
+      title: 'Business Finance Support',
+      path: '/contact',
+      icon: TrendingUp,
+      description: 'Funding readiness, loan applications and financial support services for growing businesses.',
+      included: [
+        'Loan Application Assistance',
+        'Credit Score Assistance',
+        'Funding Preparation',
+        'Business Finance Advisory',
+        'Financial Forecasting',
+        'Lender Documentation Support'
+      ]
+    },
+    {
+      title: 'Accounts Receivable & Payable',
+      path: '/contact',
+      icon: Calculator,
+      description: 'Credit control, debtor management and accounts payable support.',
+      included: [
+        'Credit Control',
+        'Accounts Receivable (AR)',
+        'Accounts Payable (AP)',
+        'Supplier Reconciliations',
+        'Debtor Follow-Up',
+        'Cash Flow Monitoring'
+      ]
     }
   ];
 
