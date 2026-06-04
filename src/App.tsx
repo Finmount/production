@@ -47,6 +47,7 @@ function App() {
             <Route path="/services/company-secretarial" element={<CompanySecretarialPage />} />
             <Route path="/services/eiis-advisory" element={<EIISAdvisoryPage />} />
             <Route path="/services/umbrella-company" element={<UmbrellaCompanyPage />} />
+            <Route path="/services/business-registration" element={<BusinessRegistrationPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/pricing" element={<PricingPage />} />
