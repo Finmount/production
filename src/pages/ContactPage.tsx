@@ -382,20 +382,22 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-blue-600" />
                     <span className="text-gray-600">Dublin, Ireland</span>
-                    <div className="flex items-center space-x-3">
-                      <Clock className="h-5 w-5 text-blue-600" />
-                      <span className="text-gray-600">
-                        Monday – Friday: 9:00 AM – 5:30 PM
-                      </span>
-                    </div>
-                  
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    <Clock className="h-5 w-5 text-blue-600" />
+                    <span className="text-gray-600">
+                      Monday – Friday: 9:00 AM – 5:30 PM
+                    </span>
+                  </div>
+
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
                     <a href="tel:+353874905010" className="text-gray-600 hover:text-blue-600">
                       +353 87 490 5010
                     </a>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-blue-600" />
                     <a href="mailto:info@finmount.ie" className="text-gray-600 hover:text-blue-600">
