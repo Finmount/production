@@ -129,11 +129,11 @@ const ServicesPage: React.FC = () => {
         'Dedicated support for queries'
       ]
     },
-    {
-      title: 'Business Registration Services',
-      path: '/services/business-registration'
-      icon: Building2,
-      description: 'Company registration, sole trader registration, VAT registration and business setup support.',
+{
+  title: 'Business Registration Services',
+  path: '/services/business-registration',
+  icon: Building2,
+  description: 'Company registration, sole trader registration, VAT registration and business setup support.',
       included: [
         'Company Registration',
         'Sole Trader Registration',
