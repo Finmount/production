@@ -275,7 +275,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-all duration-500">
                 <img 
-                  src="/images/deal.png" 
+                  src="/images/deal.jpg" 
                   alt="Business handshake" 
                   className="w-full h-auto object-cover"
                 />
