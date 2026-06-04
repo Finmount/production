@@ -70,21 +70,33 @@ const teamMembers: TeamMember[] = [
               {/* Team member image */}
               <div className="h-64 bg-gray-200 relative overflow-hidden">
                 {member.name === 'Binu Jose' ? (
-                  <img 
-                    src="/images/binu.jpeg" 
-                    alt="Binu Jose" 
+                  <img
+                    src="/images/binu.jpeg"
+                    alt="Binu Jose"
                     className="w-full h-full object-cover"
                   />
                 ) : member.name === 'Nimisha Biju' ? (
-                  <img 
-                    src="/images/Nimisha.jpeg" 
-                    alt="Nimisha Biju" 
+                  <img
+                    src="/images/Nimisha.jpeg"
+                    alt="Nimisha Biju"
                     className="w-full h-full object-cover"
                   />
-                ) : member.name === 'Archana C Vinod' ? (
-                  <img 
-                    src="/images/Archana.jpeg" 
-                    alt="Archana C Vinod" 
+                ) : member.name === 'Edwin Thompson' ? (
+                  <img
+                    src="/images/edwin.jpeg"
+                    alt="Edwin Thompson"
+                    className="w-full h-full object-cover"
+                  />
+                ) : member.name === 'Sona Susan Thomas' ? (
+                  <img
+                    src="/images/sona.png"
+                    alt="Sona Susan Thomas"
+                    className="w-full h-full object-cover"
+                  />
+                ) : member.name === 'Anna Mariya Saji' ? (
+                  <img
+                    src="/images/anna.png"
+                    alt="Anna Mariya Saji"
                     className="w-full h-full object-cover"
                   />
                 ) : (
@@ -92,6 +104,7 @@ const teamMembers: TeamMember[] = [
                     <User className="h-24 w-24 text-gray-400" />
                   </div>
                 )}
+              
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
                   <h3 className="text-xl font-bold">{member.name}</h3>
                   <p className="text-sm text-gray-200">{member.role}</p>
