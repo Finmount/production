@@ -9,49 +9,51 @@ interface TeamMember {
   bio: string;
 }
 
-const teamMembers: TeamMember[] = [
-  {
-    name: 'Binu Jose',
-    role: 'Director',
-    qualifications: ['ACCA Certified', 'MBA Finance'],
-    experience: '11 years of experience',
-    bio: 'Binu leads our team with extensive experience in accounting and financial management, specializing in advisory services for SMEs and growth companies.'
-  },
-  {
-    name: 'Nimisha Biju',
-    role: 'Financial Analyst',
-    qualifications: ['ACCA Certified', 'MSc Accounting and Finance'],
-    experience: 'Specialized in financial reporting',
-    bio: 'Nimisha focuses on delivering high-quality financial reporting and bookkeeping services with a detail-oriented approach.'
-  },
-  {
-    name: 'Edwin Thomson',
-    role: 'Financial Analyst',
-    qualifications: ['MSc Accounting and Finance Management'],
-    experience: 'VAT and Income Tax Expertise',
-    bio: 'Edwin specializes in VAT and income tax compliance, financial analysis, and accounting support. He helps clients navigate complex tax requirements while providing accurate financial insights for informed business decisions.'
-  },
-  {
-    name: 'Sona Susan Thomas',
-    role: 'Accounts Assistant',
-    qualifications: ['ACCA Part Qualified'],
-    experience: 'Accounting and Administrative Support',
-    bio: 'Sona supports the accounting team with bookkeeping, financial administration, and client service activities. She is currently ACCA Part Qualified and continues to develop her expertise in accounting and finance.'
-  },
-  {
-    name: 'Anna Mariya Saji',
-    role: 'Accounts Assistant',
-    qualifications: [
-      'BCom',
-      'MSc Accounting and Finance',
-      'ACCA Part Qualified'
-    ],
-    experience: 'Accounting and Finance Support',
-    bio: 'Anna supports the accounting team with bookkeeping, financial administration, and client services. With a BCom, MSc in Accounting and Finance, and ACCA Part Qualification, she contributes to delivering accurate and efficient accounting support to clients.'
-  }
-];
+const TeamSection: React.FC = () => {
+  const teamMembers: TeamMember[] = [
+    {
+      name: 'Binu Jose',
+      role: 'Director',
+      qualifications: ['ACCA Certified', 'MBA Finance'],
+      experience: '11 years of experience',
+      bio: 'Binu leads our team with extensive experience in accounting and financial management, specializing in advisory services for SMEs and growth companies.'
+    },
+    {
+      name: 'Nimisha Biju',
+      role: 'Financial Analyst',
+      qualifications: ['ACCA Certified', 'MSc Accounting and Finance'],
+      experience: 'Specialized in financial reporting',
+      bio: 'Nimisha focuses on delivering high-quality financial reporting and bookkeeping services with a detail-oriented approach.'
+    },
+    {
+      name: 'Edwin Thompson',
+      role: 'Financial Analyst',
+      qualifications: ['MSc Accounting and Finance Management'],
+      experience: 'VAT and Income Tax Expertise',
+      bio: 'Edwin specializes in VAT and income tax compliance, financial analysis, and accounting support. He helps clients navigate complex tax requirements while providing accurate financial insights for informed business decisions.'
+    },
+    {
+      name: 'Sona Susan Thomas',
+      role: 'Accounts Assistant',
+      qualifications: ['ACCA Part Qualified'],
+      experience: 'Accounting and Administrative Support',
+      bio: 'Sona supports the accounting team with bookkeeping, financial administration, and client service activities. She is currently ACCA Part Qualified and continues to develop her expertise in accounting and finance.'
+    },
+    {
+      name: 'Anna Mariya Saji',
+      role: 'Accounts Assistant',
+      qualifications: [
+        'BCom',
+        'MSc Accounting and Finance',
+        'ACCA Part Qualified'
+      ],
+      experience: 'Accounting and Finance Support',
+      bio: 'Anna supports the accounting team with bookkeeping, financial administration, and client services. With a BCom, MSc in Accounting and Finance, and ACCA Part Qualification, she contributes to delivering accurate and efficient accounting support to clients.'
+    }
+  ];
 
   return (
+    
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
