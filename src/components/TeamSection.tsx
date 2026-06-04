@@ -79,7 +79,7 @@ const TeamSection: React.FC = () => {
                   />
                 ) : member.name === 'Nimisha Biju' ? (
                   <img
-                    src="/images/nimishanew2.jpg"
+                    src="/images/nimisha3.jpg"
                     alt="Nimisha Biju"
                     className="w-full h-full object-cover object-top"
                   />
