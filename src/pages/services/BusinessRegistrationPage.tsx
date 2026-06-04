@@ -48,7 +48,6 @@ description: 'Start trading with confidence from day one.'
 const keyBenefitsSection = ( <div className="my-16"> <h2 className="text-3xl font-bold text-gray-900 mb-8">
 Key Benefits Explained </h2>
 
-```
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <div className="rounded-lg overflow-hidden shadow-lg">
       <img
@@ -143,7 +142,6 @@ Key Services </h2>
     </div>
   </div>
 </>
-```
 
 );
 
