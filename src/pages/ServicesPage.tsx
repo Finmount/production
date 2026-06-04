@@ -131,7 +131,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'Business Registration Services',
-      path: '/contact',
+      path: '/services/business-registration'
       icon: Building2,
       description: 'Company registration, sole trader registration, VAT registration and business setup support.',
       included: [
