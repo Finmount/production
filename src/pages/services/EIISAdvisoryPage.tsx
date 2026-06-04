@@ -62,7 +62,7 @@ const EIISAdvisoryPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden h-full shadow-lg">
             <img 
-              src="/images/banner.png" 
+              src="/images/banner.jpeg" 
               alt="EIIS investment advisory" 
               className="w-full h-full object-cover"
             />
@@ -171,7 +171,7 @@ const EIISAdvisoryPage: React.FC = () => {
       ctaTitle="Explore EIIS opportunities"
       ctaDescription="Learn how your company can benefit from EIIS funding or how you can invest tax-efficiently."
       ctaButtonText="Schedule a consultation"
-      heroImage="/images/banner.png"
+      heroImage="/images/banner.jpeg"
     />
   );
 };
