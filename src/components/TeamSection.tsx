@@ -81,7 +81,7 @@ const TeamSection: React.FC = () => {
                   <img
                     src="/images/nimisha.jpeg"
                     alt="Nimisha Biju"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 ) : member.name === 'Edwin Thomson' ? (
                   <img
@@ -99,7 +99,7 @@ const TeamSection: React.FC = () => {
                   <img
                     src="/images/anna.png"
                     alt="Anna Mariya Saji"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
