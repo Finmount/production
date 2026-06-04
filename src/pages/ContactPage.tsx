@@ -428,10 +428,17 @@ const ContactPage: React.FC = () => {
                     <span className="text-gray-700">WhatsApp Us</span>
                   </a>
                   
-                  <button className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors w-full text-left">
+                  <a
+                    href="https://wa.me/353874905010?text=Hi%20Finmount,%20I%20would%20like%20to%20book%20a%2020-minute%20discovery%20call."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
                     <Clock className="h-5 w-5 text-blue-600" />
-                    <span className="text-gray-700">Book a 20-minute discovery call</span>
-                  </button>
+                    <span className="text-gray-700">
+                      Book a 20-minute discovery call
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
