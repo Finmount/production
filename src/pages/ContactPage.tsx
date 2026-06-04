@@ -138,9 +138,11 @@ const ContactPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Tell us how you work — we'll tailor the scope and fee
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Get a personalized quote based on your business needs, systems, and preferences.
-            </p>
+              <p className="text-xl text-blue-100 mb-8">
+                Whether you need accounting, payroll, tax compliance, company registration,
+                employment permits, business finance support, or advisory services,
+                we'll provide a tailored solution for your business.
+              </p>
           </div>
         </div>
       </section>
@@ -228,16 +230,20 @@ const ContactPage: React.FC = () => {
                       Services Needed (select all that apply)
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {[
-                        'Year-End Accounts',
-                        'Online Bookkeeping',
-                        'VAT Returns Filing',
-                        'Payroll & HR',
-                        'Business Advisory',
-                        'Company Secretarial',
-                        'EIIS Advisory',
-                        'Umbrella Company'
-                      ].map((service) => (
+                    {[
+                      'Year-End Accounts',
+                      'Online Bookkeeping',
+                      'VAT Returns Filing',
+                      'Payroll & HR',
+                      'Business Advisory',
+                      'Company Secretarial',
+                      'EIIS Advisory',
+                      'Umbrella Company',
+                      'Business Registration Services',
+                      'Employment Permit Services',
+                      'Business Finance Support',
+                      'Accounts Receivable & Payable'
+                    ].map((service) => (
                         <label key={service} className="flex items-center space-x-2 cursor-pointer">
                           <input
                             type="checkbox"
@@ -376,7 +382,12 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-blue-600" />
                     <span className="text-gray-600">Dublin, Ireland</span>
-                  </div>
+                    <div className="flex items-center space-x-3">
+                      <Clock className="h-5 w-5 text-blue-600" />
+                      <span className="text-gray-600">
+                        Monday – Friday: 9:00 AM – 5:30 PM
+                      </span>
+                    </div>
                   
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
