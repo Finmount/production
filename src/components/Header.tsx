@@ -30,6 +30,11 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
     { name: 'Company Secretarial', path: '/services/company-secretarial' },
     { name: 'EIIS Investment Advisory', path: '/services/eiis-advisory' },
     { name: 'Umbrella Company (PAYE)', path: '/services/umbrella-company' },
+  
+    { name: 'Business Registration Services', path: '/contact' },
+    { name: 'Employment Permit Services', path: '/contact' },
+    { name: 'Business Finance Support', path: '/contact' },
+    { name: 'Accounts Receivable & Payable', path: '/contact' },
   ];
 
   return (
@@ -58,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
               
               {isServicesOpen && (
                 <div 
-                  className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50"
+                  className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
