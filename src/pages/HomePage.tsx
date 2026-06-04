@@ -212,7 +212,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
               Finmount Ltd — Accountants in Dublin for SMEs, contractors & growth companies
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-up animation-delay-200">
-              Accounting that keeps pace with your business. We prepare year-end accounts, maintain live online bookkeeping, 
+              Accounting, payroll, tax, company compliance, business setup, funding support and employment permit services for growing businesses across Ireland. We prepare year-end accounts, maintain live online bookkeeping, 
               file accurate VAT returns, run payroll under PAYE Modernisation, and handle company secretarial tasks. 
               For founders and contractors, we add advisory support, EIIS investment guidance, and a compliant umbrella solution.
             </p>
@@ -335,8 +335,8 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
             <p className="text-lg text-gray-600">Everything we include with our services</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.slice(0, 3).map((service, index) => (
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+             {services.map((service, index) => (
               <div 
                 key={service.title}
                 className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-up"
@@ -379,7 +379,95 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
           </div>
         </div>
       </section>
-
+      {/* Additional Business Support Services */}
+      <section className="py-16 bg-white border-t">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Additional Business Support Services
+            </h2>
+            <p className="text-lg text-gray-600">
+              Beyond accounting, we help businesses with setup, compliance, funding, payroll and growth.
+            </p>
+          </div>
+      
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                Payroll Services
+              </h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✓ Weekly Payroll</li>
+                <li>✓ Fortnightly Payroll</li>
+                <li>✓ Monthly Payroll</li>
+                <li>✓ PAYE Submissions</li>
+              </ul>
+            </div>
+      
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                Company Compliance
+              </h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✓ CRO Returns</li>
+                <li>✓ RBO Filings</li>
+                <li>✓ Company Secretarial Support</li>
+                <li>✓ Revenue Compliance</li>
+              </ul>
+            </div>
+      
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                Business Setup
+              </h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✓ Company Registration</li>
+                <li>✓ Sole Trader Registration</li>
+                <li>✓ VAT Registration</li>
+                <li>✓ Trading Name Registration</li>
+              </ul>
+            </div>
+      
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                Tax Services
+              </h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✓ Corporation Tax Returns</li>
+                <li>✓ VAT Returns</li>
+                <li>✓ Revenue Reporting</li>
+                <li>✓ Tax Planning Support</li>
+              </ul>
+            </div>
+      
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                Business Finance
+              </h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✓ Loan Application Assistance</li>
+                <li>✓ Credit Control</li>
+                <li>✓ Accounts Receivable (AR)</li>
+                <li>✓ Accounts Payable (AP)</li>
+              </ul>
+            </div>
+      
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                Employment & Immigration
+              </h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>✓ Employment Permit Applications</li>
+                <li>✓ Critical Skills Permit Support</li>
+                <li>✓ General Employment Permit Support</li>
+                <li>✓ Work Visa Assistance</li>
+              </ul>
+            </div>
+      
+          </div>
+        </div>
+      </section>
       {/* Industries We Help */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
