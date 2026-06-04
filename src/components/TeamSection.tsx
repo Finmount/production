@@ -19,7 +19,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Nimisha Biju',
-    role: 'Junior Accountant',
+    role: 'Financial Analyst',
     qualifications: ['ACCA Certified', 'MSc Accounting and Finance'],
     experience: 'Specialized in financial reporting',
     bio: 'Nimisha focuses on delivering high-quality financial reporting and bookkeeping services with a detail-oriented approach.'
