@@ -34,7 +34,7 @@ const TeamSection: React.FC = () => {
     },
     {
       name: 'Edwin Thomson',
-      role: 'Senior Accountant',
+      role: 'junior Accountant',
       qualifications: ['MSc Accounting and Finance'],
       experience: 'Specialized in bookkeeping',
       bio: 'Edwin brings expertise in bookkeeping systems and processes, helping clients maintain accurate financial records and streamline their accounting workflows.'
