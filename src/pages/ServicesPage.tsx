@@ -205,9 +205,10 @@ const ServicesPage: React.FC = () => {
               Full-stack finance for Irish businesses
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Whether you're hiring your first employee or coordinating a contractor payroll at scale, 
-              Finmount provides one place for compliance and decision support. Explore our services below, 
-              then request a scope-specific quote.
+              Whether you're starting a business, hiring your first employee, applying for funding,
+              managing payroll, or staying compliant with Revenue and CRO requirements, Finmount
+              provides one place for accounting, compliance and business support services.
+              Explore our services below and request a tailored quote for your business.
             </p>
           </div>
         </div>
