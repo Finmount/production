@@ -67,7 +67,7 @@ const BusinessAdvisoryPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden h-full shadow-lg">
             <img 
-              src="/images/banner.png" 
+              src="/images/banner.jpeg" 
               alt="Business advisory services" 
               className="w-full h-full object-cover"
             />
@@ -206,7 +206,7 @@ const BusinessAdvisoryPage: React.FC = () => {
       ctaTitle="Get strategic guidance"
       ctaDescription="Transform challenges into opportunities with our expert business advisory services."
       ctaButtonText="Schedule a consultation"
-      heroImage="/images/banner.png"
+      heroImage="/images/banner.jpeg"
     />
   );
 };
