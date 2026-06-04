@@ -72,7 +72,7 @@ const PricingPage: React.FC = () => {
       <section className="relative text-white py-16">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center z-0" style={{ 
-          backgroundImage: "url('/images/banner.png')", 
+          backgroundImage: "url('/images/banner.jpeg')", 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.5)'
