@@ -14,6 +14,7 @@ import BusinessAdvisoryPage from './pages/services/BusinessAdvisoryPage';
 import CompanySecretarialPage from './pages/services/CompanySecretarialPage';
 import EIISAdvisoryPage from './pages/services/EIISAdvisoryPage';
 import UmbrellaCompanyPage from './pages/services/UmbrellaCompanyPage';
+import BusinessRegistrationPage from './pages/services/BusinessRegistrationPage';
 import IndustriesPage from './pages/IndustriesPage';
 import AboutPage from './pages/AboutPage';
 import PricingPage from './pages/PricingPage';
