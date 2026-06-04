@@ -97,7 +97,7 @@ const TeamSection: React.FC = () => {
                   />
                 ) : member.name === 'Anna Mariya Saji' ? (
                   <img
-                    src="/images/anna.png"
+                    src="/images/anna1.png"
                     alt="Anna Mariya Saji"
                     className="w-full h-full object-cover object-top"
                   />
