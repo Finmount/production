@@ -200,7 +200,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
       <section className="relative text-white pt-24 pb-16">
         {/* Background Image - Replace the URL with your actual image */}
         <div className="absolute inset-0 bg-cover bg-center z-0" style={{ 
-          backgroundImage: "url('/images/banner.png')", 
+          backgroundImage: "url('/images/banner.jpeg')", 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.4)'
