@@ -203,18 +203,22 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
           backgroundImage: "url('/images/banner.jpg')", 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.4)'
+          filter: 'brightness(0.6)'
         }}></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-up">
-              Finmount Ltd — Accountants in Dublin for SMEs, contractors & growth companies
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+              Accounting, Tax &
+              <br />
+              Business Advisory
+              <br />
+              for Irish Businesses
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-up animation-delay-200">
-              Accounting, payroll, tax, company compliance, business setup, funding support and employment permit services for growing businesses across Ireland. We prepare year-end accounts, maintain live online bookkeeping, 
-              file accurate VAT returns, run payroll under PAYE Modernisation, and handle company secretarial tasks. 
-              For founders and contractors, we add advisory support, EIIS investment guidance, and a compliant umbrella solution.
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Professional accounting, payroll, taxation, company formation
+              and business support services for SMEs, contractors and
+              growing businesses across Ireland.
             </p>
             <p className="text-lg mb-10 text-blue-200 animate-fade-up animation-delay-400">
               Speak with us today and get a tailored quote that fits how you actually work.
