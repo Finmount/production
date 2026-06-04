@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
     bio: 'Nimisha focuses on delivering high-quality financial reporting and bookkeeping services with a detail-oriented approach.'
   },
   {
-    name: 'Edwin Thompson',
+    name: 'Edwin Thomson',
     role: 'Financial Analyst',
     qualifications: ['MSc Accounting and Finance Management'],
     experience: 'VAT and Income Tax Expertise',
