@@ -197,25 +197,96 @@ const SalaryCalculatorPage = () => {
 
         </div>
 
-        {/* CTA */}
-        <section className="bg-blue-900 text-white rounded-2xl p-10 mt-12 text-center">
-
-          <h2 className="text-3xl font-bold mb-4">
-            Need help reducing your tax bill?
-          </h2>
-
-          <p className="text-blue-100 mb-6">
-            Speak with a Finmount advisor and explore tax-efficient salary,
-            pension and business structures.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-4 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-100 transition"
-          >
-            Book Free Consultation
-          </Link>
-
+        {/* Consultation CTA */}
+        <section className="mt-12 bg-gradient-to-r from-blue-900 via-slate-900 to-blue-900 text-white rounded-2xl overflow-hidden">
+        
+          <div className="p-10 md:p-14 text-center">
+        
+            <div className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium mb-4">
+              FINMOUNT TAX ADVISORY
+            </div>
+        
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Could You Be Paying Less Tax?
+            </h2>
+        
+            <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
+              Salary structure, pension contributions, tax credits and business
+              planning can significantly impact your take-home pay.
+              Speak with a Finmount advisor for tailored guidance.
+            </p>
+        
+            <div className="grid md:grid-cols-4 gap-4 mb-10 text-left">
+        
+              <div className="bg-white/10 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">
+                  Tax Planning
+                </h3>
+                <p className="text-sm text-blue-100">
+                  Maximise available credits and reliefs.
+                </p>
+              </div>
+        
+              <div className="bg-white/10 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">
+                  Pension Advice
+                </h3>
+                <p className="text-sm text-blue-100">
+                  Improve retirement savings tax-efficiently.
+                </p>
+              </div>
+        
+              <div className="bg-white/10 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">
+                  Payroll Support
+                </h3>
+                <p className="text-sm text-blue-100">
+                  PAYE, USC and PRSI compliance support.
+                </p>
+              </div>
+        
+              <div className="bg-white/10 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">
+                  Business Owners
+                </h3>
+                <p className="text-sm text-blue-100">
+                  Salary vs dividend optimisation strategies.
+                </p>
+              </div>
+        
+            </div>
+        
+            <div className="mb-8">
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-100">
+                <span>✓ ACCA Qualified Advisors</span>
+                <span>✓ Irish Tax Specialists</span>
+                <span>✓ Revenue Compliance Experts</span>
+                <span>✓ Free Initial Consultation</span>
+              </div>
+            </div>
+        
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+        
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Book Free Consultation
+              </Link>
+        
+              <a
+                href="https://wa.me/353874905010"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
+              >
+                WhatsApp an Advisor
+              </a>
+        
+            </div>
+        
+          </div>
+        
         </section>
 
       </div>
