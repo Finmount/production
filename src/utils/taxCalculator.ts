@@ -81,8 +81,9 @@ export function calculateSalary({
   const taxableIncome = grossIncome - pensionAmount;
 
   // Annual tax figures
+  // Revenue rules: PAYE and PRSI on taxable (post-pension), USC on gross (pre-pension)
   const paye  = calcPAYE(taxableIncome, maritalStatus);
-  const usc   = calcUSC(taxableIncome);
+  const usc   = calcUSC(grossIncome);
   const prsi  = calcPRSI(grossIncome);
 
   const totalDeductions = paye + usc + prsi + pensionAmount;
