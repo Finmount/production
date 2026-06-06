@@ -15,6 +15,7 @@ import CompanySecretarialPage from './pages/services/CompanySecretarialPage';
 import EIISAdvisoryPage from './pages/services/EIISAdvisoryPage';
 import UmbrellaCompanyPage from './pages/services/UmbrellaCompanyPage';
 import BusinessRegistrationPage from './pages/services/BusinessRegistrationPage';
+import SalaryCalculatorPage from './pages/SalaryCalculatorPage';
 import IndustriesPage from './pages/IndustriesPage';
 import AboutPage from './pages/AboutPage';
 import PricingPage from './pages/PricingPage';
@@ -48,6 +49,7 @@ function App() {
             <Route path="/services/eiis-advisory" element={<EIISAdvisoryPage />} />
             <Route path="/services/umbrella-company" element={<UmbrellaCompanyPage />} />
             <Route path="/services/business-registration" element={<BusinessRegistrationPage />} />
+            <Route path="/salary-calculator" element={<SalaryCalculatorPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/pricing" element={<PricingPage />} />
