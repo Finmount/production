@@ -58,13 +58,7 @@ const SalaryCalculatorPage = () => {
 
             <div className="mb-6">
               <label className="block mb-2 font-medium">
-                {payFrequency === 'annual'
-                  ? 'Annual Salary (€)'
-                  : payFrequency === 'monthly'
-                  ? 'Monthly Salary (€)'
-                  : payFrequency === 'fortnightly'
-                  ? 'Fortnightly Salary (€)'
-                  : 'Weekly Salary (€)'}
+                Gross Annual Salary (€)
               </label>
 
               <input
@@ -153,9 +147,8 @@ const SalaryCalculatorPage = () => {
             </h2>
 
             {(() => {
-              const divisors = { annual: 1, monthly: 12, fortnightly: 26, weekly: 52 };
-              const labels   = { annual: 'Annual', monthly: 'Monthly', fortnightly: 'Fortnightly', weekly: 'Weekly' };
-              const d = divisors[payFrequency] ?? 1;
+              const labels = { annual: 'Annual', monthly: 'Monthly', fortnightly: 'Fortnightly', weekly: 'Weekly' };
+              const d = result.periodDivisor;
               const periodLabel = labels[payFrequency] ?? 'Annual';
               const fmt = (n) => (n / d).toLocaleString('en-IE', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
@@ -261,9 +254,8 @@ const SalaryCalculatorPage = () => {
         </div>
 
           {(() => {
-            const divisors = { annual: 1, monthly: 12, fortnightly: 26, weekly: 52 };
             const labels   = { annual: 'Annual', monthly: 'Monthly', fortnightly: 'Fortnightly', weekly: 'Weekly' };
-            const d = divisors[payFrequency] ?? 1;
+            const d = result.periodDivisor;
             const periodLabel = labels[payFrequency] ?? 'Annual';
             const fmt = (n) => (n / d).toFixed(2);
 
