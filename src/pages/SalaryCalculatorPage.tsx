@@ -13,7 +13,8 @@ const SalaryCalculatorPage = () => {
     salary,
     bonus,
     pensionPercent: pension,
-    maritalStatus
+    maritalStatus,
+    payFrequency,
   });
 
   return (
@@ -57,7 +58,13 @@ const SalaryCalculatorPage = () => {
 
             <div className="mb-6">
               <label className="block mb-2 font-medium">
-                Annual Salary (€)
+                {payFrequency === 'annual'
+                  ? 'Annual Salary (€)'
+                  : payFrequency === 'monthly'
+                  ? 'Monthly Salary (€)'
+                  : payFrequency === 'fortnightly'
+                  ? 'Fortnightly Salary (€)'
+                  : 'Weekly Salary (€)'}
               </label>
 
               <input
