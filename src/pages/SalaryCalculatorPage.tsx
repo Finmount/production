@@ -152,39 +152,49 @@ const SalaryCalculatorPage = () => {
               Your Results
             </h2>
 
-            <div className="space-y-8">
+            {(() => {
+              const divisors = { annual: 1, monthly: 12, fortnightly: 26, weekly: 52 };
+              const labels   = { annual: 'Annual', monthly: 'Monthly', fortnightly: 'Fortnightly', weekly: 'Weekly' };
+              const d = divisors[payFrequency] ?? 1;
+              const periodLabel = labels[payFrequency] ?? 'Annual';
+              const fmt = (n) => (n / d).toLocaleString('en-IE', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
-              <div>
-                <p className="text-gray-500 mb-2">
-                  Gross Income
-                </p>
+              return (
+                <div className="space-y-8">
 
-                <h3 className="text-4xl font-bold text-gray-900">
-                  €{result.grossIncome.toLocaleString()}
-                </h3>
-              </div>
+                  <div>
+                    <p className="text-gray-500 mb-2">
+                      {periodLabel} Gross Income
+                    </p>
 
-              <div>
-                <p className="text-gray-500 mb-2">
-                  Total Deductions
-                </p>
+                    <h3 className="text-4xl font-bold text-gray-900">
+                      €{fmt(result.grossIncome)}
+                    </h3>
+                  </div>
 
-                <h3 className="text-4xl font-bold text-red-600">
-                  €{result.totalDeductions.toLocaleString()}
-                </h3>
-              </div>
+                  <div>
+                    <p className="text-gray-500 mb-2">
+                      {periodLabel} Deductions
+                    </p>
 
-              <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
-                <p className="text-gray-500 mb-2">
-                  Take Home Pay
-                </p>
+                    <h3 className="text-4xl font-bold text-red-600">
+                      €{fmt(result.totalDeductions)}
+                    </h3>
+                  </div>
 
-                <h3 className="text-4xl font-bold text-green-600">
-                  €{result.takeHomePay.toLocaleString()}
-                </h3>
-              </div>
+                  <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
+                    <p className="text-gray-500 mb-2">
+                      {periodLabel} Take Home Pay
+                    </p>
 
-            </div>
+                    <h3 className="text-4xl font-bold text-green-600">
+                      €{fmt(result.takeHomePay)}
+                    </h3>
+                  </div>
+
+                </div>
+              );
+            })()}
 
           </div>
 
@@ -249,33 +259,46 @@ const SalaryCalculatorPage = () => {
           </div>
         
         </div>
-          <h2 className="text-2xl font-bold mb-6">
-            Tax Breakdown
-          </h2>
 
-          <div className="space-y-4">
+          {(() => {
+            const divisors = { annual: 1, monthly: 12, fortnightly: 26, weekly: 52 };
+            const labels   = { annual: 'Annual', monthly: 'Monthly', fortnightly: 'Fortnightly', weekly: 'Weekly' };
+            const d = divisors[payFrequency] ?? 1;
+            const periodLabel = labels[payFrequency] ?? 'Annual';
+            const fmt = (n) => (n / d).toFixed(2);
 
-            <div className="flex justify-between border-b pb-3">
-              <span>PAYE</span>
-              <span>€{result.paye.toFixed(2)}</span>
-            </div>
+            return (
+              <>
+                <h2 className="text-2xl font-bold mb-6">
+                  Tax Breakdown ({periodLabel})
+                </h2>
 
-            <div className="flex justify-between border-b pb-3">
-              <span>USC</span>
-              <span>€{result.usc.toFixed(2)}</span>
-            </div>
+                <div className="space-y-4">
 
-            <div className="flex justify-between border-b pb-3">
-              <span>PRSI</span>
-              <span>€{result.prsi.toFixed(2)}</span>
-            </div>
+                  <div className="flex justify-between border-b pb-3">
+                    <span>PAYE</span>
+                    <span>€{fmt(result.paye)}</span>
+                  </div>
 
-            <div className="flex justify-between">
-              <span>Pension</span>
-              <span>€{result.pension.toFixed(2)}</span>
-            </div>
+                  <div className="flex justify-between border-b pb-3">
+                    <span>USC</span>
+                    <span>€{fmt(result.usc)}</span>
+                  </div>
 
-          </div>
+                  <div className="flex justify-between border-b pb-3">
+                    <span>PRSI</span>
+                    <span>€{fmt(result.prsi)}</span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <span>Pension</span>
+                    <span>€{fmt(result.pension)}</span>
+                  </div>
+
+                </div>
+              </>
+            );
+          })()}
 
         </div>
 
