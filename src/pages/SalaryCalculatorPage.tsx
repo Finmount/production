@@ -6,12 +6,14 @@ const SalaryCalculatorPage = () => {
   const [salary, setSalary] = useState(50000);
   const [bonus, setBonus] = useState(0);
   const [pension, setPension] = useState(5);
+  const [maritalStatus, setMaritalStatus] = useState('single');
+  const [payFrequency, setPayFrequency] = useState('annual');
 
   const result = calculateSalary({
     salary,
     bonus,
     pensionPercent: pension,
-    maritalStatus: 'single'
+    maritalStatus
   });
 
   return (
@@ -81,15 +83,57 @@ const SalaryCalculatorPage = () => {
 
             <div className="mb-6">
               <label className="block mb-2 font-medium">
+                Marital Status
+              </label>
+
+              <select
+                value={maritalStatus}
+                onChange={(e) => setMaritalStatus(e.target.value)}
+                className="w-full border border-gray-300 p-3 rounded-lg"
+              >
+                <option value="single">Single</option>
+                <option value="married-one-income">
+                  Married (One Income)
+                </option>
+                <option value="married-two-income">
+                  Married (Two Incomes)
+                </option>
+              </select>
+            </div>
+
+            <div className="mb-6">
+              <label className="block mb-2 font-medium">
+                Pay Frequency
+              </label>
+
+              <select
+                value={payFrequency}
+                onChange={(e) => setPayFrequency(e.target.value)}
+                className="w-full border border-gray-300 p-3 rounded-lg"
+              >
+                <option value="annual">Annual</option>
+                <option value="monthly">Monthly</option>
+                <option value="fortnightly">Fortnightly</option>
+                <option value="weekly">Weekly</option>
+              </select>
+            </div>
+
+            <div className="mb-6">
+              <label className="block mb-2 font-medium">
                 Pension Contribution (%)
               </label>
 
               <input
-                type="number"
+                type="range"
+                min="0"
+                max="40"
                 value={pension}
                 onChange={(e) => setPension(Number(e.target.value))}
-                className="w-full border border-gray-300 p-3 rounded-lg"
+                className="w-full"
               />
+              <p className="text-sm text-gray-600 mt-2">
+                {pension}% pension contribution
+              </p>
             </div>
 
           </div>
@@ -123,7 +167,7 @@ const SalaryCalculatorPage = () => {
                 </h3>
               </div>
 
-              <div>
+              <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
                 <p className="text-gray-500 mb-2">
                   Take Home Pay
                 </p>
@@ -139,34 +183,65 @@ const SalaryCalculatorPage = () => {
 
         </div>
 
-        {/* Monthly / Weekly */}
-        <div className="grid md:grid-cols-2 gap-6 mt-10">
-
-          <div className="bg-blue-50 p-6 rounded-xl shadow">
-            <h3 className="font-semibold text-lg mb-3">
-              Monthly Take Home
-            </h3>
-
-            <p className="text-3xl font-bold text-blue-900">
-              €{(result.takeHomePay / 12).toFixed(0)}
-            </p>
-          </div>
-
-          <div className="bg-green-50 p-6 rounded-xl shadow">
-            <h3 className="font-semibold text-lg mb-3">
-              Weekly Take Home
-            </h3>
-
-            <p className="text-3xl font-bold text-green-700">
-              €{(result.takeHomePay / 52).toFixed(0)}
-            </p>
-          </div>
-
+      {/* Monthly / Weekly / Fortnightly */}
+      <div className="grid md:grid-cols-3 gap-6 mt-10">
+      
+        <div className="bg-blue-50 p-6 rounded-xl shadow">
+          <h3 className="font-semibold text-lg mb-3">
+            Monthly Take Home
+          </h3>
+      
+          <p className="text-3xl font-bold text-blue-900">
+            €{result.monthlyTakeHome.toFixed(0)}
+          </p>
         </div>
+      
+        <div className="bg-purple-50 p-6 rounded-xl shadow">
+          <h3 className="font-semibold text-lg mb-3">
+            Fortnightly Take Home
+          </h3>
+      
+          <p className="text-3xl font-bold text-purple-700">
+            €{result.fortnightlyTakeHome.toFixed(0)}
+          </p>
+        </div>
+      
+        <div className="bg-green-50 p-6 rounded-xl shadow">
+          <h3 className="font-semibold text-lg mb-3">
+            Weekly Take Home
+          </h3>
+      
+          <p className="text-3xl font-bold text-green-700">
+            €{result.weeklyTakeHome.toFixed(0)}
+          </p>
+        </div>
+      
+      </div>
 
         {/* Tax Breakdown */}
         <div className="bg-white rounded-xl shadow-lg p-8 mt-10">
-
+        <div className="mb-8">
+        
+          <div className="flex justify-between mb-2">
+            <span>Total Deductions</span>
+        
+            <span>
+              {result.deductionPercentage.toFixed(1)}%
+            </span>
+          </div>
+        
+          <div className="w-full bg-gray-200 rounded-full h-4">
+        
+            <div
+              className="bg-red-500 h-4 rounded-full"
+              style={{
+                width: `${result.deductionPercentage}%`
+              }}
+            />
+        
+          </div>
+        
+        </div>
           <h2 className="text-2xl font-bold mb-6">
             Tax Breakdown
           </h2>
