@@ -1,144 +1,111 @@
-export interface SalaryInputs {
-  salary: number;
-  bonus: number;
-  pensionPercent: number;
-  maritalStatus:
-    | 'single'
-    | 'married-one-income'
-    | 'married-two-income';
-}
+// taxCalculator.js — Irish tax calculator 2026
 
-export interface SalaryResult {
-  grossIncome: number;
-  taxableIncome: number;
+const FREQUENCY_MULTIPLIERS = {
+  annual:      1,
+  monthly:     12,
+  fortnightly: 26,
+  weekly:      52,
+};
 
-  paye: number;
-  usc: number;
-  prsi: number;
-  pension: number;
+function calcPAYE(taxableIncome, maritalStatus) {
+  // Standard rate cutoffs 2026
+  const cutoffs = {
+    'single':             42000,
+    'married-one-income': 51000,
+    'married-two-income': 84000,
+  };
 
-  totalDeductions: number;
-  takeHomePay: number;
+  // Tax credits 2026
+  const credits = {
+    'single':             1875,
+    'married-one-income': 3750,
+    'married-two-income': 3750,
+  };
 
-  monthlyTakeHome: number;
-  fortnightlyTakeHome: number;
-  weeklyTakeHome: number;
-
-  deductionPercentage: number;
-}
-
-export function calculateSalary(
-  inputs: SalaryInputs
-): SalaryResult {
-  const grossIncome =
-    inputs.salary + inputs.bonus;
-
-  const pension =
-    grossIncome *
-    (inputs.pensionPercent / 100);
-
-  const taxableIncome =
-    grossIncome - pension;
-
-  // PAYE
-  let standardBand = 44000;
-
-  if (
-    inputs.maritalStatus ===
-    'married-one-income'
-  ) {
-    standardBand = 53000;
-  }
-
-  if (
-    inputs.maritalStatus ===
-    'married-two-income'
-  ) {
-    standardBand = 62000;
-  }
+  const cutoff = cutoffs[maritalStatus] ?? cutoffs['single'];
+  const credit = credits[maritalStatus] ?? credits['single'];
 
   let paye = 0;
-
-  if (taxableIncome <= standardBand) {
-    paye = taxableIncome * 0.2;
+  if (taxableIncome <= cutoff) {
+    paye = taxableIncome * 0.20;
   } else {
-    paye =
-      standardBand * 0.2 +
-      (taxableIncome - standardBand) *
-        0.4;
+    paye = cutoff * 0.20 + (taxableIncome - cutoff) * 0.40;
   }
 
-  // Basic tax credits
-  paye = Math.max(0, paye - 4000);
+  return Math.max(0, paye - credit);
+}
 
-  // USC
+function calcUSC(income) {
+  // USC exempt if income <= €13,000
+  if (income <= 13000) return income * 0.005;
+
+  const bands = [
+    [0,     12012, 0.005],
+    [12012, 22920, 0.02 ],
+    [22920, 70044, 0.04 ],
+    [70044, Infinity, 0.08],
+  ];
+
   let usc = 0;
-
-  if (taxableIncome <= 12012) {
-    usc = taxableIncome * 0.005;
-  } else if (taxableIncome <= 28656) {
-    usc =
-      12012 * 0.005 +
-      (taxableIncome - 12012) * 0.02;
-  } else if (taxableIncome <= 70044) {
-    usc =
-      12012 * 0.005 +
-      (28656 - 12012) * 0.02 +
-      (taxableIncome - 28656) * 0.03;
-  } else {
-    usc =
-      12012 * 0.005 +
-      (28656 - 12012) * 0.02 +
-      (70044 - 28656) * 0.03 +
-      (taxableIncome - 70044) * 0.08;
+  for (const [lo, hi, rate] of bands) {
+    if (income > lo) {
+      usc += (Math.min(income, hi) - lo) * rate;
+    }
   }
+  return usc;
+}
 
-  // PRSI
-  const prsi =
-    taxableIncome * 0.042;
+function calcPRSI(income) {
+  // Class A PRSI: 4% on all income (no upper ceiling for employee)
+  // Exempt if weekly income <= €352 (annualised: €18,304)
+  if (income <= 18304) return 0;
+  return income * 0.04;
+}
 
-  const totalDeductions =
-    paye +
-    usc +
-    prsi +
-    pension;
+export function calculateSalary({
+  salary,
+  bonus = 0,
+  pensionPercent = 0,
+  maritalStatus = 'single',
+  payFrequency = 'annual',
+}) {
+  const multiplier = FREQUENCY_MULTIPLIERS[payFrequency] ?? 1;
 
-  const takeHomePay =
-    grossIncome -
-    totalDeductions;
+  // Convert input salary to annual regardless of frequency entered
+  const annualSalary  = salary * multiplier;
+  const annualBonus   = bonus;                          // bonus is always annual
+  const grossIncome   = annualSalary + annualBonus;
 
-  const monthlyTakeHome =
-    takeHomePay / 12;
+  // Pension is pre-tax (relief at source)
+  const pensionAmount = grossIncome * (pensionPercent / 100);
+  const taxableIncome = grossIncome - pensionAmount;
 
-  const fortnightlyTakeHome =
-    takeHomePay / 26;
+  // Annual tax figures
+  const paye  = calcPAYE(taxableIncome, maritalStatus);
+  const usc   = calcUSC(taxableIncome);
+  const prsi  = calcPRSI(grossIncome);
 
-  const weeklyTakeHome =
-    takeHomePay / 52;
+  const totalDeductions = paye + usc + prsi + pensionAmount;
+  const takeHomePay     = grossIncome - totalDeductions;
 
-  const deductionPercentage =
-    grossIncome > 0
-      ? (totalDeductions /
-          grossIncome) *
-        100
-      : 0;
+  const deductionPercentage = grossIncome > 0
+    ? (totalDeductions / grossIncome) * 100
+    : 0;
 
   return {
+    // Annual figures
     grossIncome,
-    taxableIncome,
-
     paye,
     usc,
     prsi,
-    pension,
-
+    pension: pensionAmount,
     totalDeductions,
     takeHomePay,
+    deductionPercentage,
 
-    monthlyTakeHome,
-    fortnightlyTakeHome,
-    weeklyTakeHome,
-
-    deductionPercentage
+    // Periodic breakdowns
+    monthlyTakeHome:     takeHomePay / 12,
+    fortnightlyTakeHome: takeHomePay / 26,
+    weeklyTakeHome:      takeHomePay / 52,
   };
 }
