@@ -245,6 +245,46 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
         </div>
       </section>
 
+      {/* Salary Calculator Banner */}
+      className="py-12 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+            <div>
+              <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                🇮🇪 NEW TOOL
+              </span>
+
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">
+                Irish Salary Calculator 2026
+              </h2>
+
+              <p className="text-green-100 text-lg max-w-2xl">
+                Calculate your take-home pay instantly. Estimate PAYE, USC,
+                PRSI and pension deductions using the latest Irish tax rates.
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-4 text-sm text-green-100">
+                <span>✓ PAYE Calculator</span>
+                <span>✓ USC Calculator</span>
+                <span>✓ PRSI Calculator</span>
+                <span>✓ Pension Impact</span>
+              </div>
+            </div>
+
+            <Link
+              to="/salary-calculator"
+              className="px-8 py-4 bg-white text-blue-800 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
+            >
+              Calculate My Salary →
+            </Link>
+
+          </div>
+
+        </div>
+      </section>
+      
       {/* Trust Strip */}
       <section className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
