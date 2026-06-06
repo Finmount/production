@@ -9,6 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -51,35 +52,31 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <div className="relative group">
-              <button 
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+          <div className="relative group">
+            <button
+              className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors"
+              onMouseEnter={() => setIsToolsOpen(true)}
+              onMouseLeave={() => setIsToolsOpen(false)}
+            >
+              <span>Tools</span>
+              <ChevronDown className="h-4 w-4" />
+            </button>
+          
+            {isToolsOpen && (
+              <div
+                className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50"
+                onMouseEnter={() => setIsToolsOpen(true)}
+                onMouseLeave={() => setIsToolsOpen(false)}
               >
-                <span>Services</span>
-                <ChevronDown className="h-4 w-4" />
-              </button>
-              
-              {isServicesOpen && (
-                <div 
-                  className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                <Link
+                  to="/salary-calculator"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
                 >
-                  {services.map((service) => (
-                    <Link
-                      key={service.path}
-                      to={service.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+                  🇮🇪 Salary Calculator
+                </Link>
+              </div>
+            )}
+          </div>
             
             <Link 
               to="/industries" 
@@ -168,6 +165,13 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
             </Link>
             <Link
               to="/resources"
+              className="block px-3 py-2 text-gray-700 hover:text-blue-800 hover:bg-blue-50 rounded-md transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Salary Calculator
+            </Link>
+            <Link
+              to="/salary-calculator"
               className="block px-3 py-2 text-gray-700 hover:text-blue-800 hover:bg-blue-50 rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
