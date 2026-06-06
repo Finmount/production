@@ -217,17 +217,32 @@ const ServicesPage: React.FC = () => {
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div 
                 key={service.title}
-                className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-up"
+                className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 animate-fade-up h-full flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="flex-shrink-0">
-                    <service.icon className="h-8 w-8 text-blue-600" />
-                  </div>
+                <div
+                  className="
+                  w-14
+                  h-14
+                  rounded-xl
+                  bg-blue-50
+                  text-blue-700
+                  flex
+                  items-center
+                  justify-center
+                  group-hover:bg-blue-800
+                  group-hover:text-white
+                  transition-all
+                  duration-300
+                  "
+                >
+                  <service.icon className="h-7 w-7" />
+                </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
                   </div>
@@ -252,7 +267,16 @@ const ServicesPage: React.FC = () => {
                   to={service.path}
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
                 >
-                  Learn more <ArrowRight className="h-4 w-4 ml-1" />
+                  className="
+                          inline-flex
+                          items-center
+                          font-semibold
+                          text-blue-700
+                          group-hover:translate-x-2
+                          transition-all
+                          duration-300
+                          mt-auto
+                          "
                 </Link>
               </div>
             ))}
