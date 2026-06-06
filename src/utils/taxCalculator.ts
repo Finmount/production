@@ -69,12 +69,10 @@ export function calculateSalary({
   maritalStatus = 'single',
   payFrequency = 'annual',
 }) {
-  const multiplier = FREQUENCY_MULTIPLIERS[payFrequency] ?? 1;
+  const divisors = FREQUENCY_MULTIPLIERS;
 
-  // Convert input salary to annual regardless of frequency entered
-  const annualSalary  = salary * multiplier;
-  const annualBonus   = bonus;                          // bonus is always annual
-  const grossIncome   = annualSalary + annualBonus;
+  // Salary input is always the ANNUAL figure — payFrequency only controls display
+  const grossIncome = salary + bonus;
 
   // Pension is pre-tax (relief at source)
   const pensionAmount = grossIncome * (pensionPercent / 100);
@@ -104,9 +102,12 @@ export function calculateSalary({
     takeHomePay,
     deductionPercentage,
 
-    // Periodic breakdowns
-    monthlyTakeHome:     takeHomePay / 12,
-    fortnightlyTakeHome: takeHomePay / 26,
-    weeklyTakeHome:      takeHomePay / 52,
+    // Periodic breakdowns — divide annual figures by frequency
+    monthlyTakeHome:     takeHomePay / (divisors['monthly']),
+    fortnightlyTakeHome: takeHomePay / (divisors['fortnightly']),
+    weeklyTakeHome:      takeHomePay / (divisors['weekly']),
+
+    // Display divisor for the selected frequency
+    periodDivisor: divisors[payFrequency] ?? 1,
   };
 }
