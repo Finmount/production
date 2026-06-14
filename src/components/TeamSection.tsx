@@ -46,9 +46,15 @@ const TeamSection: React.FC = () => {
         'BCom',
         'MSc Accounting and Finance',
         'ACCA Part Qualified'
+    },
+    {
+      name: 'Maxon Thankachan',
+      role: 'Business Analyst',
+      qualifications: ['B.com Marketing ,M.A Accounting and Finance'],
+      experience: 'Supports business analysis, financial reporting, data interpretation, and process improvement initiatives',
+      bio: 'Business Analyst with a strong academic background in marketing, accounting, and finance. Focused on financial reporting, business performance analysis, and supporting clients with data-driven insights.'
+    }
       ],
-      experience: 'Accounting and Finance Support',
-      bio: 'Anna supports the accounting team with bookkeeping, financial administration, and client services. With a BCom, MSc in Accounting and Finance, and ACCA Part Qualification, she contributes to delivering accurate and efficient accounting support to clients.'
     }
   ];
 
@@ -97,8 +103,14 @@ const TeamSection: React.FC = () => {
                   />
                 ) : member.name === 'Anna Mariya Saji' ? (
                   <img
-                    src="/images/anna1.png"
+                    src="/images/maxon.png"
                     alt="Anna Mariya Saji"
+                    className="w-full h-full object-cover object-top"
+                  />
+                ) : member.name === 'Maxon Thankachan' ? (
+                  <img
+                    src="/images/anna1.png"
+                    alt="Maxon Thankachan"
                     className="w-full h-full object-cover object-top"
                   />
                 ) : (
