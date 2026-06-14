@@ -14,7 +14,6 @@ import {
   Star
 } from 'lucide-react';
 import useScrollToTop from '../utils/useScrollToTop';
-import { motion } from "framer-motion";
 import TeamSection from '../components/TeamSection';
 
 interface HomePageProps {
@@ -342,7 +341,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
         <div className="grid md:grid-cols-3 gap-8 items-stretch">
     
             {whyFinmount.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -439,7 +438,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
                     {item.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
           ))}
     
         </div>
