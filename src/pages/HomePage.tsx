@@ -14,6 +14,7 @@ import {
   Star
 } from 'lucide-react';
 import useScrollToTop from '../utils/useScrollToTop';
+import { motion } from "framer-motion";
 import TeamSection from '../components/TeamSection';
 
 interface HomePageProps {
