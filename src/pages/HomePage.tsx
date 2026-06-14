@@ -341,30 +341,40 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
     
         <div className="grid md:grid-cols-3 gap-8">
     
-          {whyFinmount.map((item) => (
-              <div
+            {whyFinmount.map((item, index) => (
+              <motion.div
                 key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15
+                }}
+                whileHover={{
+                  y: -10,
+                  scale: 1.02
+                }}
                 className="
                   group
                   relative
                   overflow-hidden
-              
+            
                   backdrop-blur-xl
                   bg-white/10
-              
+            
                   border
                   border-white/20
-              
+            
                   rounded-2xl
                   p-8
-              
+            
                   transition-all
                   duration-500
-              
-                  hover:-translate-y-3
+            
                   hover:bg-white/15
                   hover:border-white/40
-              
+            
                   hover:shadow-[0_25px_50px_rgba(59,130,246,0.25)]
                 "
               >
@@ -429,7 +439,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
                     {item.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
           ))}
     
         </div>
