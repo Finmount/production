@@ -209,9 +209,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Accounting, Tax &
-              <br />
-              Business Advisory
+              Accounting, Tax & Business Advisory
               <br />
               for Irish Businesses
             </h1>
