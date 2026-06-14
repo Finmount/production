@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <img src="/images/Logo1.png" alt="Finmount Logo" className="h-10" />
-              <span className="text-xl font-bold text-white">Finmount</span>
+              <span className="text-xl font-bold text-white"></span>
             </Link>
             <p className="text-gray-300 mb-4">
               Proactive accounting for Irish businesses. ACCA-qualified leadership with director-level oversight on every file.
