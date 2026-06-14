@@ -304,72 +304,68 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
         </div>
       </section>
 
-      {/* Why Finmount */}
-      <section className="py-20 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Finmount</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We deliver more than just compliance—we're your partner for financial clarity and strategic growth
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image with floating elements */}
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-all duration-500">
-                <img 
-                  src="/images/deal.jpg" 
-                  alt="Business handshake" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              
-              {/* Floating badges */}
-              <div className="absolute -top-8 -right-8 bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow-lg transform rotate-12 animate-pulse">
-                Director-level oversight
-              </div>
-              
-              <div className="absolute -bottom-6 -left-6 bg-green-100 text-green-800 px-5 py-3 rounded-full shadow-lg transform -rotate-6">
-                ACCA-qualified
-              </div>
-            </div>
-            
-            {/* Right side - Content cards */}
-            <div className="space-y-8">
-              {whyFinmount.map((item, index) => (
-                <div 
-                  key={item.title}
-                  className="bg-white border-l-4 border-blue-600 shadow-md rounded-lg p-6 transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-fade-up"
-                  style={{ animationDelay: `${index * 200}ms` }}
-                >
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-800 rounded-full">
-                        <item.icon className="h-6 w-6" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-              
-              <div className="mt-6 text-center lg:text-left">
-                <button
-                  onClick={onQuoteClick}
-                  className="inline-flex items-center px-6 py-3 bg-blue-800 text-white font-semibold rounded-lg hover:bg-blue-900 transition-all duration-300 transform hover:scale-105 shadow-md"
-                >
-                  <CheckCircle className="h-5 w-5 mr-2" />
-                  Start your journey with us
-                </button>
-              </div>
-            </div>
-          </div>
+    {/* Why Finmount */}
+    <section className="relative min-h-[800px] overflow-hidden">
+    
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/deal.jpg"
+          alt="Why Finmount"
+          className="w-full h-full object-cover"
+        />
+    
+        <div className="absolute inset-0 bg-black/55"></div>
+      </div>
+    
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
+    
+        <div className="max-w-3xl mb-16">
+    
+          <span className="inline-block bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm mb-6">
+            WHY FINMOUNT
+          </span>
+    
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            More Than Compliance.
+            <br />
+            Strategic Business Support.
+          </h2>
+    
+          <p className="text-xl text-gray-200 leading-relaxed">
+            We help Irish businesses stay compliant, improve cash flow,
+            reduce tax exposure and make better financial decisions.
+          </p>
+    
         </div>
-      </section>
+    
+        <div className="grid md:grid-cols-3 gap-8">
+    
+          {whyFinmount.map((item) => (
+            <div
+              key={item.title}
+              className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8"
+            >
+              <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mb-5">
+                <item.icon className="h-7 w-7 text-white" />
+              </div>
+    
+              <h3 className="text-2xl font-semibold text-white mb-3">
+                {item.title}
+              </h3>
+    
+              <p className="text-gray-200">
+                {item.description}
+              </p>
+            </div>
+          ))}
+    
+        </div>
+    
+      </div>
+    
+    </section>
 
       {/* Services Overview */}
       <section className="py-16 bg-gray-50">
