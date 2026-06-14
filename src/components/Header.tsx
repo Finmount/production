@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img src="/images/Logo1.png" alt="Finmount Logo" className="h-10" />
-            <span className="text-xl font-bold text-gray-900">Finmount</span>
+            <span className="text-xl font-bold text-gray-900"></span>
           </Link>
 
           {/* Desktop Navigation */}
