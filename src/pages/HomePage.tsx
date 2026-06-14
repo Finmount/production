@@ -313,7 +313,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
           className="w-full h-full object-cover"
         />
     
-        <div className="absolute inset-0 bg-black/55"></div>
+        <div className="absolute inset-0 bg-slate-900/45"></div>
       </div>
     
       {/* Content */}
