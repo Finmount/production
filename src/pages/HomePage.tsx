@@ -339,7 +339,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
     
         </div>
     
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
     
             {whyFinmount.map((item, index) => (
               <motion.div
