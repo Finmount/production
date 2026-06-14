@@ -59,8 +59,6 @@ const TeamSection: React.FC = () => {
       ],
       experience: 'Supports business analysis, financial reporting, data interpretation, and process improvement initiatives',
       bio: 'Business Analyst with a strong academic background in marketing, accounting, and finance. Focused on financial reporting, business performance analysis, and supporting clients with data-driven insights.'
-    },
-      ],
     }
   ];
 
