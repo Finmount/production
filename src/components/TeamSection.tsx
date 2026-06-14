@@ -115,7 +115,7 @@ const TeamSection: React.FC = () => {
                   <img
                     src="/images/maxon.png" 
                     alt="Maxon Thankachan"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
