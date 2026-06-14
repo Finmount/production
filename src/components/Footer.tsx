@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img src="/images/Logo.png" alt="Finmount Logo" className="h-10" />
+              <img src="/images/Logo1.png" alt="Finmount Logo" className="h-10" />
               <span className="text-xl font-bold text-white">Finmount</span>
             </Link>
             <p className="text-gray-300 mb-4">
