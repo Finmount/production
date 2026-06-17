@@ -149,13 +149,21 @@ export function calculateSalary({
   payFrequency = 'annual',
   medicalCard = false,
   aged70plus = false,
-}) {
-  const grossIncome   = salary + bonus;
+  
+  prsiCategory = 'full',
+  selfEmployed = false,
+  dependentChildren = false,
+  rentalIncome = 0,
+  })
+{
+  const grossIncome = salary + bonus + rentalIncome;
   const pensionAmount = calcPension(salary, pensionPercent); // pension on salary only
   const taxableIncome = Math.max(0, grossIncome - pensionAmount); // pension reduces taxable income
 
   // PAYE (income tax)
   const paye = calcPAYE(taxableIncome, maritalStatus);
+  const childTaxCredit = dependentChildren ? 500 : 0;
+  const adjustedPAYE = Math.max(0, paye - childTaxCredit);
 
   // USC – applied to GROSS income (pension does NOT reduce USC)
   let usc = calcUSC(grossIncome);
@@ -178,9 +186,19 @@ export function calculateSalary({
   if (grossIncome <= USC_EXEMPTION_THRESHOLD) usc = 0;
 
   // PRSI – applied to GROSS income; exempt if aged 70+
-  const prsi = aged70plus ? 0 : calcPRSI(grossIncome);
+      let prsi = 0;
+    
+    if (!aged70plus) {
+    if (selfEmployed || prsiCategory === 'self-employed') {
+    prsi = grossIncome * 0.04; // Class S
+    } else if (prsiCategory === 'reduced') {
+    prsi = grossIncome * 0.02;
+    } else {
+    prsi = calcPRSI(grossIncome); // Class A
+    }
+    }
 
-  const totalTax        = paye + usc + prsi;
+  const totalTax        = adjustedPAYE + usc + prsi;
   const totalDeductions = totalTax + pensionAmount;
   const takeHomePay     = grossIncome - totalDeductions;
 
@@ -199,11 +217,19 @@ export function calculateSalary({
 
   return {
     // Inputs echoed
-    grossSalary:   salary,
+return {
+  // Inputs echoed
+    grossSalary: salary,
     bonus,
     pensionPercent,
     maritalStatus,
     payFrequency,
+  
+    // New fields
+    prsiCategory,
+    selfEmployed,
+    dependentChildren,
+    rentalIncome,
 
     // Gross
     grossIncome,
@@ -211,7 +237,7 @@ export function calculateSalary({
     pension: pensionAmount,
 
     // Tax components (annual)
-    paye,
+    paye: adjustedPAYE,
     usc,
     prsi,
     totalTax,
