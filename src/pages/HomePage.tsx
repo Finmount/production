@@ -400,114 +400,73 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
               group
               relative
               overflow-hidden
-        
               backdrop-blur-xl
               bg-white/10
-        
               border
               border-white/20
-        
               rounded-2xl
               p-8
-        
               transition-all
               duration-500
-        
               hover:-translate-y-3
               hover:scale-[1.02]
-        
               hover:bg-white/15
               hover:border-white/40
-        
               hover:shadow-[0_25px_50px_rgba(59,130,246,0.25)]
             "
           >
-                className="
-                  group
-                  relative
-                  overflow-hidden
-            
-                  backdrop-blur-xl
-                  bg-white/10
-            
-                  border
-                  border-white/20
-            
-                  rounded-2xl
-                  p-8
-            
-                  transition-all
-                  duration-500
-            
-                  hover:bg-white/15
-                  hover:border-white/40
-            
-                  hover:shadow-[0_25px_50px_rgba(59,130,246,0.25)]
-                "
-              >
-                {/* Blue Glow Effect */}
-                <div
-                  className="
-                    absolute
-                    -top-12
-                    -right-12
-              
-                    w-40
-                    h-40
-              
-                    bg-blue-500/20
-              
-                    rounded-full
-                    blur-3xl
-              
-                    opacity-0
-                    group-hover:opacity-100
-              
-                    transition-all
-                    duration-700
-                  "
-                />
-              
-                {/* Icon */}
-                <div
-                  className="
-                    relative
-                    z-10
-              
-                    w-14
-                    h-14
-              
-                    rounded-xl
-                    bg-white/20
-              
-                    flex
-                    items-center
-                    justify-center
-              
-                    mb-5
-              
-                    transition-all
-                    duration-500
-              
-                    group-hover:scale-125
-                    group-hover:rotate-6
-                  "
-                >
-                  <item.icon className="h-7 w-7 text-white" />
-                </div>
-              
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold text-white mb-3">
-                    {item.title}
-                  </h3>
-              
-                  <p className="text-gray-200">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-          ))}
+            {/* Blue Glow Effect */}
+            <div
+              className="
+                absolute
+                -top-12
+                -right-12
+                w-40
+                h-40
+                bg-blue-500/20
+                rounded-full
+                blur-3xl
+                opacity-0
+                group-hover:opacity-100
+                transition-all
+                duration-700
+              "
+            />
+        
+            {/* Icon */}
+            <div
+              className="
+                relative
+                z-10
+                w-14
+                h-14
+                rounded-xl
+                bg-white/20
+                flex
+                items-center
+                justify-center
+                mb-5
+                transition-all
+                duration-500
+                group-hover:scale-125
+                group-hover:rotate-6
+              "
+            >
+              <item.icon className="h-7 w-7 text-white" />
+            </div>
+        
+            {/* Content */}
+            <div className="relative z-10">
+              <h3 className="text-2xl font-semibold text-white mb-3">
+                {item.title}
+              </h3>
+        
+              <p className="text-gray-200">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
     
         </div>
     
