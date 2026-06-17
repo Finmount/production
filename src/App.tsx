@@ -18,6 +18,7 @@ import BusinessRegistrationPage from './pages/services/BusinessRegistrationPage'
 import SalaryCalculatorPage from './pages/SalaryCalculatorPage';
 import AccountantDublinPage from './pages/AccountantDublinPage';
 import PayrollServicesIrelandPage from './pages/PayrollServicesIrelandPage';
+import CompanyFormationIrelandPage from './pages/CompanyFormationIrelandPage';
 import IndustriesPage from './pages/IndustriesPage';
 import AboutPage from './pages/AboutPage';
 import PricingPage from './pages/PricingPage';
