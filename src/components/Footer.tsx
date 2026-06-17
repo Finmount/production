@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
               </p>
               <div className="flex items-center space-x-2 text-gray-400 mb-2">
                 <MapPin className="h-4 w-4" />
-                <span>Kylemore, Dublin 10, D10DP80, Ireland</span>
+                <span>Kylemore, Dublin 10, D10 DP80, Ireland</span>
               </div>
               <p className="text-gray-400 text-sm mt-4">
                 While we're happy to meet in person, most of our services can be delivered remotely for your convenience.
