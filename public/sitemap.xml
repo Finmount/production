@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <url>
+    <loc>https://www.finmount.ie/</loc>
+  </url>
 
-<url>
-  <loc>https://www.finmount.ie/</loc>
-  <lastmod>2025-08-25T14:38:37+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://www.finmount.ie/about</loc>
+  </url>
 
+  <url>
+    <loc>https://www.finmount.ie/contact</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/services</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/industries</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/pricing</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/resources</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/accountant-dublin</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/payroll-services-ireland</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/company-formation-ireland</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/vat-returns-ireland</loc>
+  </url>
+
+  <url>
+    <loc>https://www.finmount.ie/umbrella-company-ireland</loc>
+  </url>
 
 </urlset>
