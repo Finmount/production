@@ -6,64 +6,135 @@ import useScrollToTop from '../utils/useScrollToTop';
 const IndustriesPage: React.FC = () => {
   // Use the custom hook to scroll to top on page load
   useScrollToTop();
-  const industries = [
-    {
-      id: 'contractors',
-      title: 'Contractors',
-      icon: Users,
-      description: 'Choose umbrella for speed or a Ltd for flexibility. We model both so you see net effects after tax/expenses and administration. We liaise with agencies, operate payroll correctly, and provide clear payslips and year-end summaries.',
-      benefits: [
-        'Same-day umbrella setup',
-        'Ltd vs umbrella comparison modeling',
-        'Agency liaison and contract review',
-        'Accurate payroll and take-home calculations',
-        'Clear year-end tax summaries',
-        'Expense guidance and compliance'
-      ]
-    },
-    {
-      id: 'startups-smes',
-      title: 'Startups & SMEs',
-      icon: TrendingUp,
-      description: 'We implement cloud bookkeeping, standardise month-end, close on a fixed day, and hold a recurring review to keep budgets, cash, and VAT aligned. When you raise, we convert management accounts into investor-friendly projections.',
-      benefits: [
-        'Cloud bookkeeping implementation',
-        'Standardized month-end processes',
-        'Regular budget and cash flow reviews',
-        'VAT compliance and planning',
-        'Investor-ready financial projections',
-        'Funding readiness support'
-      ]
-    },
-    {
-      id: 'retail-hospitality',
-      title: 'Retail & Hospitality',
-      icon: Building2,
-      description: 'Multiple rates and tips pooling create VAT and payroll complexity. We align POS Z-reads to bookkeeping, reconcile merchant takings, and ensure service charges and benefits are treated correctly.',
-      benefits: [
-        'Complex VAT rate handling',
-        'POS system integration and Z-read reconciliation',
-        'Merchant takings reconciliation',
-        'Tips pooling and service charge compliance',
-        'Staff benefits administration',
-        'Inventory and waste tracking'
-      ]
-    },
-    {
-      id: 'trades',
-      title: 'Trades',
-      icon: Calculator,
-      description: 'We tame receipts and supplier bills, schedule VAT and RCT interactions where relevant, and project cash needs across seasonal swings.',
-      benefits: [
-        'Mobile receipt capture and management',
-        'Supplier bill processing and tracking',
-        'VAT and RCT compliance',
-        'Seasonal cash flow projections',
-        'Job costing and profitability analysis',
-        'Equipment depreciation scheduling'
-      ]
-    }
-  ];
+const industries = [
+  {
+    id: 'smes',
+    title: 'SMEs',
+    icon: TrendingUp,
+    description:
+      'Growing SMEs need reliable bookkeeping, management accounts, VAT compliance and strategic financial advice. We help business owners make informed decisions with accurate financial information.',
+    benefits: [
+      'Cloud bookkeeping',
+      'Management accounts',
+      'Cashflow forecasting',
+      'VAT compliance',
+      'Payroll management',
+      'Business growth support'
+    ]
+  },
+
+  {
+    id: 'healthcare',
+    title: 'Healthcare Professionals & HSE Contractors',
+    icon: Users,
+    description:
+      'Specialist accounting support for doctors, consultants, nurses, locums, pharmacists and HSE contractors operating through limited companies or as self-employed professionals.',
+    benefits: [
+      'Medical contractor tax planning',
+      'Revenue compliance',
+      'Payroll and pension advice',
+      'Practice setup support',
+      'Annual accounts',
+      'Income tax returns'
+    ]
+  },
+
+  {
+    id: 'restaurants',
+    title: 'Restaurants, Cafés & Catering Businesses',
+    icon: Building2,
+    description:
+      'Hospitality businesses face complex VAT rates, payroll requirements and cashflow challenges. We provide industry-specific support to keep your business compliant and profitable.',
+    benefits: [
+      'Hospitality VAT support',
+      'Payroll and tips management',
+      'POS reconciliation',
+      'Cashflow management',
+      'Management reporting',
+      'Revenue compliance'
+    ]
+  },
+
+  {
+    id: 'import-export',
+    title: 'Import & Export Businesses',
+    icon: Building2,
+    description:
+      'Cross-border trade creates additional VAT and customs obligations. We help businesses manage international transactions efficiently.',
+    benefits: [
+      'Import VAT advice',
+      'Export VAT compliance',
+      'Intrastat guidance',
+      'Cross-border tax planning',
+      'Financial reporting',
+      'Revenue compliance'
+    ]
+  },
+
+  {
+    id: 'non-resident',
+    title: 'Non-Resident Companies',
+    icon: Calculator,
+    description:
+      'We assist overseas companies trading in Ireland with VAT registration, compliance obligations and Irish tax requirements.',
+    benefits: [
+      'Irish VAT registration',
+      'Non-resident VAT returns',
+      'Revenue correspondence',
+      'Irish compliance support',
+      'Cross-border tax advice',
+      'Ongoing accounting support'
+    ]
+  },
+
+  {
+    id: 'startups',
+    title: 'Startups & New Businesses',
+    icon: TrendingUp,
+    description:
+      'From company formation to funding readiness, we help startups establish strong financial foundations and scalable systems.',
+    benefits: [
+      'Company formation',
+      'Business registrations',
+      'Startup tax planning',
+      'Investor-ready reporting',
+      'Financial forecasting',
+      'Growth advisory'
+    ]
+  },
+
+  {
+    id: 'owner-managed',
+    title: 'Owner-Managed Companies',
+    icon: Users,
+    description:
+      'Practical accounting and tax advice for directors seeking to maximise profits, optimise remuneration and grow their businesses.',
+    benefits: [
+      'Director remuneration planning',
+      'Corporate tax planning',
+      'Annual accounts',
+      'Dividend planning',
+      'Management reporting',
+      'Business advisory'
+    ]
+  },
+
+  {
+    id: 'property-owners',
+    title: 'Property Owners & Landlords',
+    icon: Building2,
+    description:
+      'Specialist support for landlords and property investors covering rental income, tax compliance and investment planning.',
+    benefits: [
+      'Rental income reporting',
+      'Income tax returns',
+      'Property tax planning',
+      'Capital gains tax guidance',
+      'Record keeping support',
+      'Revenue compliance'
+    ]
+  }
+];
 
   return (
     <div className="min-h-screen pt-16">
