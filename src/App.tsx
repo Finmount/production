@@ -56,6 +56,7 @@ function App() {
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/accountant-dublin" element={<AccountantDublinPage />} />
             <Route path="/payroll-services-ireland" element={<PayrollServicesIrelandPage />}/>
+            <Route path="/company-formation-ireland" element={<CompanyFormationIrelandPage />}/>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
