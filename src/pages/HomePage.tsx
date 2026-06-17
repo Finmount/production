@@ -132,6 +132,30 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
 
   const industries = [
     {
+      title: 'Construction Companies',
+      description: 'Accounting, payroll, VAT and tax support for builders and contractors.',
+      icon: Building2,
+      path: '/industries'
+    },
+    {
+      title: 'Healthcare Professionals',
+      description: 'Accounting and tax support for doctors, nurses and healthcare contractors.',
+      icon: Shield,
+      path: '/industries'
+    },
+    {
+      title: 'E-Commerce',
+      description: 'VAT, bookkeeping and reporting support for online businesses.',
+      icon: TrendingUp,
+      path: '/industries'
+    },
+    {
+      title: 'Property Owners',
+      description: 'Rental income reporting and tax planning support.',
+      icon: Building2,
+      path: '/industries'
+    }
+    {
       title: 'Contractors',
       description: 'Quick start, umbrella or Ltd guidance, predictable take-home.',
       icon: Users,
@@ -282,7 +306,36 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
       
         </div>
       </section>
-      
+      <section className="py-12 bg-white">
+        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+        <div className="grid md:grid-cols-4 gap-6">
+    
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <h3 className="text-3xl font-bold text-blue-900">11+</h3>
+            <p className="text-gray-600">Years Experience</p>
+          </div>
+    
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <h3 className="text-3xl font-bold text-blue-900">500+</h3>
+            <p className="text-gray-600">Clients Supported</p>
+          </div>
+    
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <h3 className="text-3xl font-bold text-blue-900">ACCA</h3>
+            <p className="text-gray-600">Qualified Team</p>
+          </div>
+    
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <h3 className="text-3xl font-bold text-blue-900">Nationwide</h3>
+            <p className="text-gray-600">Service Across Ireland</p>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
       {/* Trust Strip */}
       <section className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -340,20 +393,35 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
     
         <div className="grid md:grid-cols-3 gap-8 items-stretch">
     
-            {whyFinmount.map((item, index) => (
-              <div
-                key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.15
-                }}
-                whileHover={{
-                  y: -10,
-                  scale: 1.02
-                }}
+        {whyFinmount.map((item) => (
+          <div
+            key={item.title}
+            className="
+              group
+              relative
+              overflow-hidden
+        
+              backdrop-blur-xl
+              bg-white/10
+        
+              border
+              border-white/20
+        
+              rounded-2xl
+              p-8
+        
+              transition-all
+              duration-500
+        
+              hover:-translate-y-3
+              hover:scale-[1.02]
+        
+              hover:bg-white/15
+              hover:border-white/40
+        
+              hover:shadow-[0_25px_50px_rgba(59,130,246,0.25)]
+            "
+          >
                 className="
                   group
                   relative
@@ -615,7 +683,57 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
           </div>
         </div>
       </section>
-
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+      
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Free Business Resources
+            </h2>
+      
+            <p className="text-gray-600">
+              Tools and guides for Irish businesses.
+            </p>
+          </div>
+      
+          <div className="grid md:grid-cols-3 gap-8">
+      
+            <Link to="/salary-calculator">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                <h3 className="text-xl font-bold mb-3">
+                  Irish Salary Calculator
+                </h3>
+      
+                <p className="text-gray-600">
+                  Calculate PAYE, USC and PRSI instantly.
+                </p>
+              </div>
+            </Link>
+      
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold mb-3">
+                VAT Calculator
+              </h3>
+      
+              <p className="text-gray-600">
+                Coming Soon
+              </p>
+            </div>
+      
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold mb-3">
+                Startup Guide
+              </h3>
+      
+              <p className="text-gray-600">
+                Coming Soon
+              </p>
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
       {/* Team Section */}
       <TeamSection />
 
