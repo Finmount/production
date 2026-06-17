@@ -25,19 +25,18 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
   }, []);
 
   const services = [
-    { name: 'Year-End Accounts', path: '/services/year-end-accounts' },
+    { name: 'Business Registration Services', path: '/contact' },
     { name: 'Online Bookkeeping', path: '/services/online-bookkeeping' },
     { name: 'VAT Returns Filing', path: '/services/vat-returns' },
     { name: 'Payroll & HR Solutions', path: '/services/payroll-hr' },
+    { name: 'Year-End Accounts', path: '/services/year-end-accounts' },
     { name: 'Business Advisory', path: '/services/business-advisory' },
     { name: 'Company Secretarial', path: '/services/company-secretarial' },
-    { name: 'EIIS Investment Advisory', path: '/services/eiis-advisory' },
-    { name: 'Umbrella Company (PAYE)', path: '/services/umbrella-company' },
-  
-    { name: 'Business Registration Services', path: '/contact' },
     { name: 'Employment Permit Services', path: '/contact' },
     { name: 'Business Finance Support', path: '/contact' },
     { name: 'Accounts Receivable & Payable', path: '/contact' },
+    { name: 'EIIS Investment Advisory', path: '/services/eiis-advisory' },
+    { name: 'Umbrella Company (PAYE)', path: '/services/umbrella-company' },
   ];
 
   const industries = [
@@ -81,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
 
             {isServicesOpen && (
               <div
-                className="absolute top-full left-0 w-72 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50 max-h-96 overflow-y-auto"
+                className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50 max-h-96 overflow-y-auto"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
@@ -95,6 +94,15 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
                     {service.name}
                   </Link>
                 ))}
+                <div className="border-t mt-2 pt-2">
+                  <Link
+                    to="/services"
+                    className="block px-4 py-2 font-semibold text-blue-700 hover:bg-blue-50"
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    View All Services →
+                  </Link>
+                </div>
               </div>
             )}
           </div>
@@ -234,14 +242,14 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
               Pricing
             </Link>
             <Link
-              to="/resources"
+              to="/salary-calculator"
               className="block px-3 py-2 text-gray-700 hover:text-blue-800 hover:bg-blue-50 rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Salary Calculator
             </Link>
             <Link
-              to="/salary-calculator"
+              to="/resources"
               className="block px-3 py-2 text-gray-700 hover:text-blue-800 hover:bg-blue-50 rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
