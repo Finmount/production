@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AccountantDublinPage = () => {
+
+  useEffect(() => {
+    document.title =
+      'Accountant Dublin | ACCA Accountants for SMEs & Contractors | Finmount';
+  }, []);
+
   return (
     <div className="pt-20">
 
