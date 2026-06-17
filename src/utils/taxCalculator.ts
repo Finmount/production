@@ -149,13 +149,12 @@ export function calculateSalary({
   payFrequency = 'annual',
   medicalCard = false,
   aged70plus = false,
-  
+
   prsiCategory = 'full',
   selfEmployed = false,
   dependentChildren = false,
   rentalIncome = 0,
-  })
-{
+}) {
   const grossIncome = salary + bonus + rentalIncome;
   const pensionAmount = calcPension(salary, pensionPercent); // pension on salary only
   const taxableIncome = Math.max(0, grossIncome - pensionAmount); // pension reduces taxable income
@@ -186,17 +185,17 @@ export function calculateSalary({
   if (grossIncome <= USC_EXEMPTION_THRESHOLD) usc = 0;
 
   // PRSI – applied to GROSS income; exempt if aged 70+
-      let prsi = 0;
-    
-    if (!aged70plus) {
+  let prsi = 0;
+
+  if (!aged70plus) {
     if (selfEmployed || prsiCategory === 'self-employed') {
-    prsi = grossIncome * 0.04; // Class S
+      prsi = grossIncome * 0.04; // Class S
     } else if (prsiCategory === 'reduced') {
-    prsi = grossIncome * 0.02;
+      prsi = grossIncome * 0.02;
     } else {
-    prsi = calcPRSI(grossIncome); // Class A
+      prsi = calcPRSI(grossIncome); // Class A
     }
-    }
+  }
 
   const totalTax        = adjustedPAYE + usc + prsi;
   const totalDeductions = totalTax + pensionAmount;
@@ -217,14 +216,12 @@ export function calculateSalary({
 
   return {
     // Inputs echoed
-return {
-  // Inputs echoed
     grossSalary: salary,
     bonus,
     pensionPercent,
     maritalStatus,
     payFrequency,
-  
+
     // New fields
     prsiCategory,
     selfEmployed,
