@@ -40,6 +40,53 @@ const Footer: React.FC = () => {
               <li><Link to="/services/company-secretarial" className="text-gray-300 hover:text-white transition-colors">Company Secretarial</Link></li>
               <li><Link to="/services/eiis-advisory" className="text-gray-300 hover:text-white transition-colors">EIIS Advisory</Link></li>
               <li><Link to="/services/umbrella-company" className="text-gray-300 hover:text-white transition-colors">Umbrella Company</Link></li>
+              <h3 className="text-lg font-semibold mb-4 mt-6">Popular Searches</h3>=
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <Link
+                      to="/accountant-dublin"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Accountant Dublin
+                    </Link>
+                  </li>
+                
+                  <li>
+                    <Link
+                      to="/payroll-services-ireland"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Payroll Services Ireland
+                    </Link>
+                  </li>
+                
+                  <li>
+                    <Link
+                      to="/company-formation-ireland"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Company Formation Ireland
+                    </Link>
+                  </li>
+                
+                  <li>
+                    <Link
+                      to="/vat-returns-ireland"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      VAT Returns Ireland
+                    </Link>
+                  </li>
+                
+                  <li>
+                    <Link
+                      to="/umbrella-company-ireland"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      Umbrella Company Ireland
+                    </Link>
+                  </li>
+                </ul>
             </ul>
           </div>
 
@@ -50,7 +97,10 @@ const Footer: React.FC = () => {
               <li><Link to="/industries#contractors" className="text-gray-300 hover:text-white transition-colors">Contractors</Link></li>
               <li><Link to="/industries#startups-smes" className="text-gray-300 hover:text-white transition-colors">Startups & SMEs</Link></li>
               <li><Link to="/industries#retail-hospitality" className="text-gray-300 hover:text-white transition-colors">Retail & Hospitality</Link></li>
-              <li><Link to="/industries#trades" className="text-gray-300 hover:text-white transition-colors">Trades</Link></li>
+              <li><Link to="/industries#Healthcare" className="text-gray-300 hover:text-white transition-colors">Healthcare</Link></li>
+              <li><Link to="/industries#Property Owners" className="text-gray-300 hover:text-white transition-colors">Property Owners</Link></li>
+              <li><Link to="/industries#E-Commerce" className="text-gray-300 hover:text-white transition-colors">E-Commerce</Link></li>
+              <li><Link to="/industries#Retail & Hospitality" className="text-gray-300 hover:text-white transition-colors">Retail & Hospitality</Link></li>
             </ul>
             <h3 className="text-lg font-semibold mb-4 mt-6">Company</h3>
             <ul className="space-y-2 text-sm">
