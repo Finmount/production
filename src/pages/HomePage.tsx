@@ -154,7 +154,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
       description: 'Rental income reporting and tax planning support.',
       icon: Building2,
       path: '/industries'
-    }
+    },
     {
       title: 'Contractors',
       description: 'Quick start, umbrella or Ltd guidance, predictable take-home.',
