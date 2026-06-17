@@ -10,6 +10,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -39,6 +40,17 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
     { name: 'Accounts Receivable & Payable', path: '/contact' },
   ];
 
+  const industries = [
+    { id: 'smes', name: 'SMEs' },
+    { id: 'healthcare', name: 'Healthcare Professionals & HSE Contractors' },
+    { id: 'restaurants', name: 'Restaurants, Cafés & Catering Businesses' },
+    { id: 'import-export', name: 'Import & Export Businesses' },
+    { id: 'non-resident', name: 'Non-Resident Companies' },
+    { id: 'startups', name: 'Startups & New Businesses' },
+    { id: 'owner-managed', name: 'Owner-Managed Companies' },
+    { id: 'property-owners', name: 'Property Owners & Landlords' },
+  ];
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
@@ -60,6 +72,66 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
           <div className="relative group">
             <button
               className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <span>Services</span>
+              <ChevronDown className="h-4 w-4" />
+            </button>
+
+            {isServicesOpen && (
+              <div
+                className="absolute top-full left-0 w-72 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50 max-h-96 overflow-y-auto"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.path}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="relative group">
+            <button
+              className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors"
+              onMouseEnter={() => setIsIndustriesOpen(true)}
+              onMouseLeave={() => setIsIndustriesOpen(false)}
+            >
+              <span>Industries</span>
+              <ChevronDown className="h-4 w-4" />
+            </button>
+
+            {isIndustriesOpen && (
+              <div
+                className="absolute top-full left-0 w-72 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50"
+                onMouseEnter={() => setIsIndustriesOpen(true)}
+                onMouseLeave={() => setIsIndustriesOpen(false)}
+              >
+                {industries.map((industry) => (
+                  <Link
+                    key={industry.id}
+                    to={`/industries#${industry.id}`}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                    onClick={() => setIsIndustriesOpen(false)}
+                  >
+                    {industry.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="relative group">
+            <button
+              className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors"
               onMouseEnter={() => setIsToolsOpen(true)}
               onMouseLeave={() => setIsToolsOpen(false)}
             >
@@ -76,6 +148,7 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
                 <Link
                   to="/salary-calculator"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                  onClick={() => setIsToolsOpen(false)}
                 >
                   🇮🇪 Salary Calculator
                 </Link>
@@ -83,14 +156,6 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
             )}
           </div>
             
-            <Link 
-              to="/industries" 
-              className={`text-gray-700 hover:text-blue-800 transition-colors ${
-                location.pathname === '/industries' ? 'text-blue-800 font-medium' : ''
-              }`}
-            >
-              Industries
-            </Link>
             <Link 
               to="/pricing" 
               className={`text-gray-700 hover:text-blue-800 transition-colors ${
@@ -108,20 +173,20 @@ const Header: React.FC<HeaderProps> = ({ onQuoteClick }) => {
               Resources
             </Link>
             <Link 
-              to="/contact" 
-              className={`text-gray-700 hover:text-blue-800 transition-colors ${
-                location.pathname === '/contact' ? 'text-blue-800 font-medium' : ''
-              }`}
-            >
-              Contact
-            </Link>
-            <Link 
               to="/about" 
               className={`text-gray-700 hover:text-blue-800 transition-colors ${
                 location.pathname === '/about' ? 'text-blue-800 font-medium' : ''
               }`}
             >
               About
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`text-gray-700 hover:text-blue-800 transition-colors ${
+                location.pathname === '/contact' ? 'text-blue-800 font-medium' : ''
+              }`}
+            >
+              Contact
             </Link>
           </nav>
 
