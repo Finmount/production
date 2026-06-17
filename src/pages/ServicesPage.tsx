@@ -262,21 +262,11 @@ const ServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
-                <Link 
+                <Link
                   to={service.path}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+                  className="inline-flex items-center font-semibold text-blue-700 group-hover:translate-x-2 transition-all duration-300 mt-auto"
                 >
-                  className="
-                          inline-flex
-                          items-center
-                          font-semibold
-                          text-blue-700
-                          group-hover:translate-x-2
-                          transition-all
-                          duration-300
-                          mt-auto
-                          "
+                  Learn more →
                 </Link>
               </div>
             ))}
