@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const VATReturnsIrelandPage = () => {
+
+  useEffect(() => {
+    document.title =
+      'VAT Returns Ireland | VAT Filing & Revenue Compliance | Finmount';
+
+    const metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'Professional VAT return preparation and filing services in Ireland. Revenue compliance, VAT registration and VAT advisory support.'
+      );
+    }
+  }, []);
+
   return (
     <div className="pt-20">
 
