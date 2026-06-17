@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Clock, 
-  Shield, 
-  Users, 
+import {
+  CheckCircle,
+  Shield,
+  Users,
   FileText,
   Calculator,
   TrendingUp,
