@@ -126,6 +126,97 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
         'Expense guidance & record-keeping',
         'Dedicated support for queries'
       ]
+    },
+    {
+      title: 'Corporate Tax Services',
+      path: '/services/corporate-tax',
+      icon: TrendingUp,
+      included: [
+        'Corporation tax returns',
+        'Tax planning strategies',
+        'Revenue compliance support',
+        'Profit extraction planning',
+        'Group structure advice',
+        'Tax risk reviews'
+      ]
+    },
+    {
+      title: 'Personal Tax Services',
+      path: '/services/personal-tax',
+      icon: Users,
+      included: [
+        'Income tax returns',
+        'Self-assessment filing',
+        'Rental income reporting',
+        'CGT calculations',
+        'Tax credit reviews',
+        'Revenue correspondence'
+      ]
+    },
+    {
+      title: 'Management Accounting',
+      path: '/services/management-accounting',
+      icon: Calculator,
+      included: [
+        'Monthly management accounts',
+        'Cash flow forecasting',
+        'Budget preparation',
+        'KPI reporting',
+        'Performance analysis',
+        'Decision support reporting'
+      ]
+    },
+    {
+      title: 'Tax Planning & Advisory',
+      path: '/services/tax-planning',
+      icon: Shield,
+      included: [
+        'Business tax planning',
+        'Personal tax optimisation',
+        'Director remuneration planning',
+        'Pension contribution strategies',
+        'Capital gains planning',
+        'Succession planning'
+      ]
+    },
+    {
+      title: 'Revenue Audit Assistance',
+      path: '/services/revenue-audit',
+      icon: FileText,
+      included: [
+        'Revenue audit preparation',
+        'Documentation reviews',
+        'Audit representation',
+        'Compliance assessments',
+        'Risk mitigation advice',
+        'Revenue communications'
+      ]
+    },
+    {
+      title: 'Financial Consultancy',
+      path: '/services/financial-consultancy',
+      icon: TrendingUp,
+      included: [
+        'Business growth planning',
+        'Funding readiness',
+        'Financial modelling',
+        'Investment analysis',
+        'Strategic planning',
+        'Performance improvement'
+      ]
+    },
+    {
+      title: 'Non-Resident VAT Registration',
+      path: '/services/non-resident-vat-registration',
+      icon: Building2,
+      included: [
+        'Irish VAT registration',
+        'Non-resident compliance',
+        'Revenue registrations',
+        'VAT filing support',
+        'Cross-border guidance',
+        'Ongoing compliance monitoring'
+      ]
     }
   ];
 
@@ -477,7 +568,7 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Services at a glance</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Additional Business Support Services</h2>
             <p className="text-lg text-gray-600">Everything we include with our services</p>
           </div>
           
