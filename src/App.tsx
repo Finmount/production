@@ -19,6 +19,7 @@ import SalaryCalculatorPage from './pages/SalaryCalculatorPage';
 import AccountantDublinPage from './pages/AccountantDublinPage';
 import PayrollServicesIrelandPage from './pages/PayrollServicesIrelandPage';
 import CompanyFormationIrelandPage from './pages/CompanyFormationIrelandPage';
+import VATReturnsIrelandPage from './pages/VATReturnsIrelandPage';
 import IndustriesPage from './pages/IndustriesPage';
 import AboutPage from './pages/AboutPage';
 import PricingPage from './pages/PricingPage';
@@ -57,6 +58,7 @@ function App() {
             <Route path="/accountant-dublin" element={<AccountantDublinPage />} />
             <Route path="/payroll-services-ireland" element={<PayrollServicesIrelandPage />}/>
             <Route path="/company-formation-ireland" element={<CompanyFormationIrelandPage />}/>
+            <Route path="/vat-returns-ireland" element={<VATReturnsIrelandPage />}/>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
