@@ -47,12 +47,17 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Industries</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Contractors</Link></li>
-              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Startups & SMEs</Link></li>
-              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Healthcare</Link></li>
-              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Property Owners</Link></li>
-              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">E-Commerce</Link></li>
-              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Retail & Hospitality</Link></li>
+                <li><Link to="/industries#smes" className="text-gray-300 hover:text-white transition-colors">SMEs</Link></li>
+                
+                <li><Link to="/industries#healthcare" className="text-gray-300 hover:text-white transition-colors">Healthcare Professionals</Link></li>
+                
+                <li><Link to="/industries#restaurants" className="text-gray-300 hover:text-white transition-colors">Restaurants & Cafés</Link></li>
+                
+                <li><Link to="/industries#import-export" className="text-gray-300 hover:text-white transition-colors">Import & Export</Link></li>
+                
+                <li><Link to="/industries#non-resident" className="text-gray-300 hover:text-white transition-colors">Non-Resident Companies</Link></li>
+                
+                <li><Link to="/industries#property-owners" className="text-gray-300 hover:text-white transition-colors">Property Owners & Landlords</Link></li>
             </ul>
             <h3 className="text-lg font-semibold mb-4 mt-6">Company</h3>
             <ul className="space-y-2 text-sm">
@@ -107,17 +112,17 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="w-full h-[250px] rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32361.629901195753!2d-6.369051561235614!3d53.335176226294585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670cea21bb74e7%3A0x2cef9cf0ceb3e55!2sKylemore%2C%20Dublin%2010%2C%20D10%20DP80!5e1!3m2!1sen!2sie!4v1781707513625!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Finmount Dublin Office Location"
-                className="rounded-lg"
-              ></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32361.629901195753!2d-6.369051561235614!3d53.335176226294585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670cea21bb74e7%3A0x2cef9cf0ceb3e55!2sKylemore%2C%20Dublin%2010%2C%20D10%20DP80!5e1!3m2!1sen!2sie!4v1781707513625!5m2!1sen!2sie"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Finmount Dublin Office Location"
+              className="rounded-lg"
+            />
             </div>
           </div>
         </div>
