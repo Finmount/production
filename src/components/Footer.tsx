@@ -47,13 +47,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Industries</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/industries#contractors" className="text-gray-300 hover:text-white transition-colors">Contractors</Link></li>
-              <li><Link to="/industries#startups-smes" className="text-gray-300 hover:text-white transition-colors">Startups & SMEs</Link></li>
-              <li><Link to="/industries#retail-hospitality" className="text-gray-300 hover:text-white transition-colors">Retail & Hospitality</Link></li>
-              <li><Link to="/industries#Healthcare" className="text-gray-300 hover:text-white transition-colors">Healthcare</Link></li>
-              <li><Link to="/industries#Property Owners" className="text-gray-300 hover:text-white transition-colors">Property Owners</Link></li>
-              <li><Link to="/industries#E-Commerce" className="text-gray-300 hover:text-white transition-colors">E-Commerce</Link></li>
-              <li><Link to="/industries#Retail & Hospitality" className="text-gray-300 hover:text-white transition-colors">Retail & Hospitality</Link></li>
+              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Contractors</Link></li>
+              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Startups & SMEs</Link></li>
+              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Healthcare</Link></li>
+              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Property Owners</Link></li>
+              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">E-Commerce</Link></li>
+              <li><Link to="/industries" className="text-gray-300 hover:text-white transition-colors">Retail & Hospitality</Link></li>
             </ul>
             <h3 className="text-lg font-semibold mb-4 mt-6">Company</h3>
             <ul className="space-y-2 text-sm">
@@ -127,7 +126,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Finmount Ltd. Kylemore, Dublin 10. Director: Binu Jose, ACCA, MBA (Finance). 
+              © {new Date().getFullYear()} Finmount Ltd. Kylemore, Dublin 10. Director: Binu Jose, ACCA, MBA (Finance). 
               All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-gray-400">
