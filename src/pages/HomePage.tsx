@@ -568,8 +568,8 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Additional Business Support Services</h2>
-            <p className="text-lg text-gray-600">Everything we include with our services</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Accounting & Business Services for Irish Companies</h2>
+            <p className="text-lg text-gray-600">ACCA-qualified accounting, tax, payroll, company formation and business advisory services for SMEs, contractors, startups and growing businesses across Ireland.</p>
           </div>
           
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -613,95 +613,6 @@ const HomePage: React.FC<HomePageProps> = ({ onQuoteClick }) => {
             >
               View All Services <ArrowRight className="h-5 w-5 ml-2" />
             </Link>
-          </div>
-        </div>
-      </section>
-      {/* Additional Business Support Services */}
-      <section className="py-16 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Additional Business Support Services
-            </h2>
-            <p className="text-lg text-gray-600">
-              Beyond accounting, we help businesses with setup, compliance, funding, payroll and growth.
-            </p>
-          </div>
-      
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-blue-700">
-                Payroll Services
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>✓ Weekly Payroll</li>
-                <li>✓ Fortnightly Payroll</li>
-                <li>✓ Monthly Payroll</li>
-                <li>✓ PAYE Submissions</li>
-              </ul>
-            </div>
-      
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-blue-700">
-                Company Compliance
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>✓ CRO Returns</li>
-                <li>✓ RBO Filings</li>
-                <li>✓ Company Secretarial Support</li>
-                <li>✓ Revenue Compliance</li>
-              </ul>
-            </div>
-      
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-blue-700">
-                Business Setup
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>✓ Company Registration</li>
-                <li>✓ Sole Trader Registration</li>
-                <li>✓ VAT Registration</li>
-                <li>✓ Trading Name Registration</li>
-              </ul>
-            </div>
-      
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-blue-700">
-                Tax Services
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>✓ Corporation Tax Returns</li>
-                <li>✓ VAT Returns</li>
-                <li>✓ Revenue Reporting</li>
-                <li>✓ Tax Planning Support</li>
-              </ul>
-            </div>
-      
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-blue-700">
-                Business Finance
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>✓ Loan Application Assistance</li>
-                <li>✓ Credit Control</li>
-                <li>✓ Accounts Receivable (AR)</li>
-                <li>✓ Accounts Payable (AP)</li>
-              </ul>
-            </div>
-      
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-blue-700">
-                Employment & Immigration
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>✓ Employment Permit Applications</li>
-                <li>✓ Critical Skills Permit Support</li>
-                <li>✓ General Employment Permit Support</li>
-                <li>✓ Work Visa Assistance</li>
-              </ul>
-            </div>
-      
           </div>
         </div>
       </section>
