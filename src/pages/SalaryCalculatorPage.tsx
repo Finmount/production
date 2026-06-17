@@ -319,7 +319,7 @@ const SalaryCalculatorPage = () => {
             {/* Pension Slider */}
             <div className="mb-5">
               <label className="block mb-1.5 font-medium text-sm">
-                Pension Contribution — <span className="text-blue-700">{pension}%</span>
+                Pension Contribution — <span className="text-blue-700">{pension.toFixed(1)}%</span>
                 {pension > 0 && (
                   <span className="text-green-600 text-xs ml-2">
                     (saves ~€{fmt(result.pensionTaxSaving)}/yr in tax)
@@ -327,7 +327,7 @@ const SalaryCalculatorPage = () => {
                 )}
               </label>
               <input
-                type="range" min="0" max="40" step="1" value={pension}
+                type="range" min="0" max="40" step="0.5" value={pension}
                 onChange={(e) => setPension(Number(e.target.value))}
                 className="w-full accent-blue-700"
               />
