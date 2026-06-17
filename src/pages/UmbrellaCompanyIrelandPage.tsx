@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const UmbrellaCompanyIrelandPage = () => {
+
+  useEffect(() => {
+    document.title =
+      'Umbrella Company Ireland | Contractor Payroll Services | Finmount';
+
+    const metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'Professional umbrella company services in Ireland for contractors, consultants and temporary workers. PAYE payroll, tax compliance and contractor support.'
+      );
+    }
+  }, []);
+
   return (
     <div className="pt-20">
 
