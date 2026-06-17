@@ -180,9 +180,15 @@ const SalaryCalculatorPage = () => {
   const [medicalCard, setMedicalCard] = useState(false);
   const [aged70plus, setAged70plus] = useState(false);
   const [activeTab, setActiveTab] = useState('breakdown');
+  const [salaryType, setSalaryType] = useState('annual');
 
+  const annualSalary =
+  salaryType === 'monthly'
+    ? salary * 12
+    : salary;
+  
   const result = calculateSalary({
-    salary,
+    salary: annualSalary,
     bonus,
     pensionPercent: pension,
     maritalStatus,
@@ -258,18 +264,38 @@ const SalaryCalculatorPage = () => {
 
           {/* ── Input Panel ── */}
           <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <h2 className="text-2xl font-bold mb-6">Your Details</h2>
-
-            {/* Salary */}
+            <h2 className="text-2xl font-bold mb-6">Your Details</h2>         
             <div className="mb-5">
-              <label className="block mb-1.5 font-medium text-sm">Gross Annual Salary (€)</label>
-              <input
-                type="number"
-                value={salary}
-                onChange={(e) => setSalary(Math.max(0, Number(e.target.value)))}
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <label className="block mb-1.5 font-medium text-sm">
+                Salary Type
+              </label>
+            
+            <select
+            value={salaryType}
+            onChange={(e) => setSalaryType(e.target.value)}
+            className="w-full border border-gray-300 p-3 rounded-lg"  
+            >
+            <option value="annual">Annual Salary</option>
+            <option value="monthly">Monthly Salary</option>
+              </select>
             </div>
+            
+            <div className="mb-5">
+              <label className="block mb-1.5 font-medium text-sm">
+                {salaryType === 'annual'
+                  ? 'Gross Annual Salary (€)'
+                  : 'Gross Monthly Salary (€)'}
+              </label>
+            
+            <input
+            type="number"
+            value={salary}
+            onChange={(e) => setSalary(Math.max(0, Number(e.target.value)))}
+            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            
+            </div>
+
 
             {/* Bonus */}
             <div className="mb-5">
