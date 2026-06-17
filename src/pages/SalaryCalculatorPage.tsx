@@ -179,6 +179,10 @@ const SalaryCalculatorPage = () => {
   const [payFrequency, setPayFrequency] = useState('monthly');
   const [medicalCard, setMedicalCard] = useState(false);
   const [aged70plus, setAged70plus] = useState(false);
+  const [prsiCategory, setPrsiCategory] = useState('full');
+  const [selfEmployed, setSelfEmployed] = useState(false);
+  const [rentalIncome, setRentalIncome] = useState(0);
+  const [dependentChildren, setDependentChildren] = useState(false);
   const [activeTab, setActiveTab] = useState('breakdown');
   const [salaryType, setSalaryType] = useState('annual');
 
@@ -195,6 +199,10 @@ const SalaryCalculatorPage = () => {
     payFrequency,
     medicalCard,
     aged70plus,
+    prsiCategory,
+    selfEmployed,
+    rentalIncome,
+    dependentChildren,
   });
 
   const d = result.periodDivisor;
@@ -381,6 +389,22 @@ const SalaryCalculatorPage = () => {
                 />
                 <span className="text-sm text-gray-700">Aged 70 or over <span className="text-gray-400">(PRSI exempt; reduced USC if income ≤ €60k)</span></span>
               </label>
+
+              <div className="mt-4">
+                <label className="block mb-2 text-sm font-medium">
+                  PRSI Category
+                </label>
+
+                <select
+                  value={prsiCategory}
+                  onChange={(e) => setPrsiCategory(e.target.value)}
+                  className="w-full border border-gray-300 p-3 rounded-lg"
+                >
+                  <option value="full">Employee (Class A)</option>
+                  <option value="reduced">Reduced PRSI</option>
+                  <option value="self-employed">Self Employed (Class S)</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -500,7 +524,15 @@ const SalaryCalculatorPage = () => {
                   <BandBar label="Take Home Pay"        value={result.takeHomePay / d}   max={result.grossIncome / d} color="bg-green-500" />
                   <BandBar label="Income Tax (PAYE)"    value={result.paye / d}           max={result.grossIncome / d} color="bg-red-500" />
                   <BandBar label="USC"                  value={result.usc / d}            max={result.grossIncome / d} color="bg-orange-400" />
-                  <BandBar label="PRSI (Class A 4.2%)"  value={result.prsi / d}           max={result.grossIncome / d} color="bg-purple-500" />
+                  <BandBar
+                    label={
+                      prsiCategory === 'self-employed'
+                        ? 'PRSI (Class S 4%)'
+                        : prsiCategory === 'reduced'
+                        ? 'PRSI (Reduced Rate)'
+                        : 'PRSI (Class A 4.2%)'
+                    }
+                    value={result.prsi / d}           max={result.grossIncome / d} color="bg-purple-500" />
                   {result.pension > 0 && (
                     <BandBar label="Pension Contribution" value={result.pension / d}      max={result.grossIncome / d} color="bg-blue-500" />
                   )}
