@@ -21,9 +21,9 @@ const TeamSection: React.FC = () => {
     {
       name: 'Nimisha Biju',
       role: 'Financial Analyst',
-      qualifications: ['ACCA Certified', 'MSc Accounting and Finance'],
-      experience: 'Specialized in financial reporting',
-      bio: 'Nimisha focuses on delivering high-quality financial reporting and bookkeeping services with a detail-oriented approach.'
+      qualifications: ['Part-Qualified ACCA', 'QFA'.'MSc Accounting and Finance',  'B.Com', 'M.Com'],
+      experience: 'Specialized in financial reporting and business registrations',
+      bio: 'Nimisha specialises in company formation, company registration, CRO compliance and business startup support. She works closely with entrepreneurs, contractors and SMEs across Ireland, helping them establish and grow their businesses while remaining compliant with statutory requirements.'
     },
     {
       name: 'Edwin Thomson',
