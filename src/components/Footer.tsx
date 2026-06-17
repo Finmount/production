@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="w-full h-[250px] rounded-lg overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9529.793019412185!2d-6.35770892672049!3d53.335231656574464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670cea29134e83%3A0x43be4b4a82569cc2!2sKylemore%2C%20Dublin%2010%2C%20D10%20EW77!5e0!3m2!1sen!2sie!4v1755084464218!5m2!1sen!2sie" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32361.629901195753!2d-6.369051561235614!3d53.335176226294585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670cea21bb74e7%3A0x2cef9cf0ceb3e55!2sKylemore%2C%20Dublin%2010%2C%20D10%20DP80!5e1!3m2!1sen!2sie!4v1781707513625!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
