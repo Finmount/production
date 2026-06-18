@@ -23,6 +23,7 @@ const TeamSection: React.FC = () => {
       role: 'Financial Analyst',
       qualifications: ['Part-Qualified ACCA', 'QFA', 'MSc Accounting and Finance',  'B.Com', 'M.Com'],
       experience: 'Specialization Cash Flow Analysis, Financial Reporting & Business Compliance',
+    },
     {
       name: 'Edwin Thomson',
       role: 'Financial Analyst',
