@@ -29,26 +29,22 @@ const TeamSection: React.FC = () => {
       name: 'Edwin Thomson',
       role: 'Financial Analyst',
       qualifications: ['MSc Accounting and Finance Management'],
-      experience: 'VAT and Income Tax Expertise',
-      bio: 'Edwin specializes in VAT and income tax compliance, financial analysis, and accounting support. He helps clients navigate complex tax requirements while providing accurate financial insights for informed business decisions.'
+      experience: 'VAT Compliance, Income Tax & Financial Reporting',
+      bio: 'Edwin Thomson supports businesses with VAT compliance, income tax services, and financial reporting. He assists clients in maintaining accurate financial records, preparing financial information, and meeting their tax and regulatory obligations. His expertise includes VAT returns, income tax compliance, financial reporting, bookkeeping support, and management accounts. Through a detail-oriented approach, he helps businesses maintain compliance and reliable financial records.'
     },
     {
       name: 'Sona Susan Thomas',
       role: 'Accounts Assistant',
       qualifications: ['ACCA Part Qualified'],
-      experience: 'Accounting and Administrative Support',
-      bio: 'Sona supports the accounting team with bookkeeping, financial administration, and client service activities. She is currently ACCA Part Qualified and continues to develop her expertise in accounting and finance.'
+      experience: 'Credit Control, Account Reconciliation & Accounts Support',
+      bio: 'Sona Susan Thomas supports clients with credit control activities, account reconciliations, and accounting administration. She assists businesses in monitoring receivables, reconciling financial records, and maintaining accurate accounting information. Her expertise includes credit control, account reconciliation, payment tracking, and financial record maintenance. Through a proactive and detail-oriented approach, she helps businesses strengthen financial controls and maintain reliable accounting records.'
     },
     {
       name: 'Anna Mariya Saji',
       role: 'Accounts Assistant',
-      qualifications: [
-        'BCom',
-        'MSc Accounting and Finance',
-        'ACCA Part Qualified'
-      ],
-      experience: 'Accounting and Administrative Support',
-      bio: 'Anna supports bookkeeping, financial administration and client service activities while continuing her professional accounting development.'
+      qualifications: ['BCom','MSc Accounting and Finance','ACCA Part Qualified'],
+      experience: 'Payroll Processing, Invoicing & Accounts Administration',
+      bio: 'Anna Maria Saji supports clients with payroll processing, invoicing, and accounts administration. She assists in maintaining payroll records, preparing invoices, processing financial documentation, and supporting day-to-day accounting functions. Her role helps ensure accurate financial administration, timely processing, and efficient record management for businesses across various sectors.'
     },
     {
       name: 'Maxon Thankachan',
@@ -57,8 +53,8 @@ const TeamSection: React.FC = () => {
         'B.Com Marketing',
         'M.A Accounting and Finance'
       ],
-      experience: 'Supports business analysis, financial reporting, data interpretation, and process improvement initiatives',
-      bio: 'Business Analyst with a strong academic background in marketing, accounting, and finance. Focused on financial reporting, business performance analysis, and supporting clients with data-driven insights.'
+      experience: 'Business Research, Process Analysis & Operational Support',
+      bio: 'Maxon Thankachan supports business improvement initiatives through research, analysis, and operational support. He assists clients in reviewing business processes, gathering operational insights, and identifying opportunities to improve efficiency and effectiveness. His expertise includes business research, process analysis, documentation, operational reviews, and business support services. He contributes to developing practical solutions that help businesses operate more effectively.'
     }
   ];
 
