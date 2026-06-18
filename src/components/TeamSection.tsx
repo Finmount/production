@@ -16,7 +16,7 @@ const TeamSection: React.FC = () => {
       role: 'Managing Director',
       qualifications: ['ACCA Certified', 'MBA Finance', 'Specialization Strategic Financial Advisory', 'Tax Planning & Business Growth'],
       experience: '15 years of experience',
-      bio: 'Binu Jose is the Founder and Managing Director of Finmount, bringing over 15 years of experience in accounting, taxation, financial management, and business advisory. As an FCCA-qualified professional, he provides strategic guidance to startups, SMEs, contractors, and established businesses across Ireland. His expertise includes financial reporting, taxation, management accounting, VAT advisory, business structuring, cash flow management, budgeting, forecasting, and strategic financial planning.'
+      bio: 'Binu Jose is the Founder and Managing Director of Finmount, bringing over 15 years of experience in accounting, taxation, financial management, and business advisory.'
     },
     {
       name: 'Nimisha Biju',
