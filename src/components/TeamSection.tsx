@@ -35,7 +35,7 @@ const TeamSection: React.FC = () => {
     {
       name: 'Sona Susan Thomas',
       role: 'Accounts Assistant',
-      qualifications: ['ACCA Part Qualified'],
+      qualifications: ['ACCA Part Qualified', 'Msc.Accounting and finance management'],
       experience: 'Credit Control, Account Reconciliation & Accounts Support',
       bio: 'Sona Susan Thomas supports clients with credit control activities, account reconciliations, and accounting administration. She assists businesses in monitoring receivables, reconciling financial records, and maintaining accurate accounting information. Her expertise includes credit control, account reconciliation, payment tracking, and financial record maintenance. Through a proactive and detail-oriented approach, she helps businesses strengthen financial controls and maintain reliable accounting records.'
     },
