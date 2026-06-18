@@ -1,83 +1,114 @@
 <!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Finmount Ltd - Professional Irish Accounting and Business Advisory Services" />
-    <title>Finmount Ltd - Professional Irish Accounting Services</title>
+<head>
+  <meta charset="UTF-8" />
 
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.finmount.ie/#org",
-  "name": "Finmount Ltd",
-  "url": "https://www.finmount.ie/",
-  "logo": "https://www.finmount.ie/Logo.png",
-  "image": "https://www.finmount.ie/og-image.jpg",
-  "description": "Finmount Ltd is a Dublin-based company providing financial solutions and advisory services.",
-  "telephone": "+353-874905010",
-  "email": "info@finmount.ie",
-  "foundingDate": "2024",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Indus House Kylemore way Dublin 10",
-    "addressLocality": "Dublin",
-    "postalCode": "D20CK03",
-    "addressCountry": "IE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 53.33306,
-    "longitude": -6.24889
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "09:00",
-      "closes": "17:00"
-    }
-  ],
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Ireland"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/finmount",
-    "https://www.facebook.com/finmount",
-    "https://twitter.com/finmount"
-  ]
-}
-</script>
-<!-- WebSite Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.finmount.ie/#website",
-  "url": "https://www.finmount.ie/",
-  "name": "Finmount Ltd",
-  "publisher": { "@id": "https://www.finmount.ie/#org" },
-  "inLanguage": "en-IE",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.finmount.ie/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Canonical -->
+
+  <link rel="canonical" href="https://www.finmount.ie/" />
+
+  <!-- Viewport -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>Finmount Ltd - Professional Irish Accounting Services</title>
+
+<meta
+ name="description"
+ content="Professional accounting, payroll, taxation, VAT, bookkeeping and business advisory services across Ireland."
+/>
+
+<meta
+ name="keywords"
+ content="Accountants Ireland, Dublin Accountant, VAT Services Ireland, Payroll Services Ireland, Bookkeeping Ireland, Business Advisory Ireland"
+/>
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="Finmount Ltd - Professional Irish Accounting Services" />
+  <meta property="og:description" content="Professional accounting, payroll, taxation and business advisory services across Ireland." />
+  <meta property="og:image" content="https://www.finmount.ie/images/Logo.png" />
+  <meta property="og:url" content="https://www.finmount.ie/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Finmount Ltd - Professional Irish Accounting Services" />
+  <meta name="twitter:description" content="Professional accounting, payroll, taxation and business advisory services across Ireland." />
+  <meta name="twitter:image" content="https://www.finmount.ie/images/Logo.png" />
+
+  <!-- Local Business Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "@id": "https://www.finmount.ie/#org",
+    "name": "Finmount Ltd",
+    "url": "https://www.finmount.ie/",
+    "logo": "https://www.finmount.ie/images/Logo.png",
+    "image": "https://www.finmount.ie/images/Logo.png",
+    "description": "Professional accounting, taxation, payroll, VAT and business advisory services in Ireland.",
+    "telephone": "+353874905010",
+    "email": "info@finmount.ie",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Indus House, Kylemore Way",
+      "addressLocality": "Dublin",
+      "postalCode": "D10 DP80",
+      "addressCountry": "IE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Ireland"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ]
   }
-}
-</script>
+  </script>
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Website Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.finmount.ie/#website",
+    "url": "https://www.finmount.ie/",
+    "name": "Finmount Ltd",
+    "publisher": {
+      "@id": "https://www.finmount.ie/#org"
+    },
+    "inLanguage": "en-IE"
+  }
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
