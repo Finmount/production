@@ -13,17 +13,19 @@ const TeamSection: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       name: 'Binu Jose',
-      role: 'Director',
-      qualifications: ['ACCA Certified', 'MBA Finance'],
-      experience: '11 years of experience',
-      bio: 'Binu leads our team with extensive experience in accounting and financial management, specializing in advisory services for SMEs and growth companies.'
+      role: 'Managing Director',
+      qualifications: ['ACCA Certified', 'MBA Finance', 'Specialization Strategic Financial Advisory', 'Tax Planning & Business Growth'],
+      experience: '15 years of experience',
+      bio: 'Binu Jose is the Founder and Managing Director of Finmount, bringing over 15 years of experience in accounting, taxation, financial management, and business advisory. As an FCCA-qualified professional, he provides strategic guidance to startups, SMEs, contractors, and established businesses across Ireland.
+            His expertise includes financial reporting, taxation, management accounting, VAT advisory, business structuring, cash flow management, budgeting, forecasting, and strategic financial planning. He works closely with business owners to strengthen financial performance, maintain compliance, and support long-term business growth.'
     },
     {
       name: 'Nimisha Biju',
       role: 'Financial Analyst',
       qualifications: ['Part-Qualified ACCA', 'QFA', 'MSc Accounting and Finance',  'B.Com', 'M.Com'],
-      experience: 'Specialized in financial reporting and business registrations',
-      bio: 'Nimisha specialises in company formation, company registration, CRO compliance and business startup support. She works closely with entrepreneurs, contractors and SMEs across Ireland, helping them establish and grow their businesses while remaining compliant with statutory requirements.'
+      experience: 'Specialization Cash Flow Analysis, Financial Reporting & Business Compliance',
+      bio: 'Nimisha Biju supports businesses through cash flow analysis, financial reporting, and compliance services. She assists clients in preparing cash flow forecasts, analysing financial information, and maintaining compliance with corporate and regulatory requirements
+            Her experience includes cash flow management, financial reporting, company formation, business registrations, and CRO compliance, helping businesses establish strong financial and operational foundations.'
     },
     {
       name: 'Edwin Thomson',
