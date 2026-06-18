@@ -16,28 +16,28 @@ const TeamSection: React.FC = () => {
       role: 'Managing Director',
       qualifications: ['ACCA Certified', 'MBA Finance', 'Specialization Strategic Financial Advisory', 'Tax Planning & Business Growth'],
       experience: '15 years of experience',
-      bio: 'Binu Jose is the Founder and Managing Director of Finmount, bringing over 15 years of experience in accounting, taxation, financial management, and business advisory. As an FCCA-qualified professional, he provides strategic guidance to startups, SMEs, contractors, and established businesses across Ireland. His expertise includes financial reporting, taxation, management accounting, VAT advisory, business structuring, cash flow management, budgeting, forecasting, and strategic financial planning. He works closely with business owners to strengthen financial performance, maintain compliance, and support long-term business growth.'
+      bio: 'Binu Jose is the Founder and Managing Director of Finmount, bringing over 15 years of experience in accounting, taxation, financial management, and business advisory. As an FCCA-qualified professional, he provides strategic guidance to startups, SMEs, contractors, and established businesses across Ireland. His expertise includes financial reporting, taxation, management accounting, VAT advisory, business structuring, cash flow management, budgeting, forecasting, and strategic financial planning.'
     },
     {
       name: 'Nimisha Biju',
       role: 'Financial Analyst',
       qualifications: ['Part-Qualified ACCA', 'QFA', 'MSc Accounting and Finance',  'B.Com', 'M.Com'],
       experience: 'Specialization Cash Flow Analysis, Financial Reporting & Business Compliance',
-      bio: 'Nimisha Biju supports businesses through cash flow analysis, financial reporting, and compliance services. She assists clients in preparing cash flow forecasts, analysing financial information, and maintaining compliance with corporate and regulatory requirements. Her experience includes cash flow management, financial reporting, company formation, business registrations, and CRO compliance, helping businesses establish strong financial and operational foundations.'
+      bio: 'Nimisha Biju supports businesses through cash flow analysis, financial reporting, and compliance services. She assists clients in preparing cash flow forecasts, analysing financial information, and maintaining compliance with corporate and regulatory requirements.'
     },
     {
       name: 'Edwin Thomson',
       role: 'Financial Analyst',
       qualifications: ['MSc Accounting and Finance Management'],
       experience: 'VAT Compliance, Income Tax & Financial Reporting',
-      bio: 'Edwin Thomson supports businesses with VAT compliance, income tax services, and financial reporting. He assists clients in maintaining accurate financial records, preparing financial information, and meeting their tax and regulatory obligations. His expertise includes VAT returns, income tax compliance, financial reporting, bookkeeping support, and management accounts. Through a detail-oriented approach, he helps businesses maintain compliance and reliable financial records.'
+      bio: 'Edwin Thomson supports businesses with VAT compliance, income tax services, and financial reporting. He assists clients in maintaining accurate financial records, preparing financial information, and meeting their tax and regulatory obligations. His expertise includes VAT returns, income tax compliance, financial reporting, bookkeeping support, and management accounts.'
     },
     {
       name: 'Sona Susan Thomas',
       role: 'Accounts Assistant',
       qualifications: ['ACCA Part Qualified', 'Msc.Accounting and finance management'],
       experience: 'Credit Control, Account Reconciliation & Accounts Support',
-      bio: 'Sona Susan Thomas supports clients with credit control activities, account reconciliations, and accounting administration. She assists businesses in monitoring receivables, reconciling financial records, and maintaining accurate accounting information. Her expertise includes credit control, account reconciliation, payment tracking, and financial record maintenance. Through a proactive and detail-oriented approach, she helps businesses strengthen financial controls and maintain reliable accounting records.'
+      bio: 'Sona Susan Thomas supports clients with credit control activities, account reconciliations, and accounting administration. She assists businesses in monitoring receivables, reconciling financial records, and maintaining accurate accounting information. Her expertise includes credit control, account reconciliation, payment tracking, and financial record maintenance.'
     },
     {
       name: 'Anna Mariya Saji',
@@ -54,7 +54,7 @@ const TeamSection: React.FC = () => {
         'M.A Accounting and Finance'
       ],
       experience: 'Business Research, Process Analysis & Operational Support',
-      bio: 'Maxon Thankachan supports business improvement initiatives through research, analysis, and operational support. He assists clients in reviewing business processes, gathering operational insights, and identifying opportunities to improve efficiency and effectiveness. His expertise includes business research, process analysis, documentation, operational reviews, and business support services. He contributes to developing practical solutions that help businesses operate more effectively.'
+      bio: 'Maxon Thankachan supports business improvement initiatives through research, analysis, and operational support. He assists clients in reviewing business processes, gathering operational insights, and identifying opportunities to improve efficiency and effectiveness.'
     }
   ];
 
