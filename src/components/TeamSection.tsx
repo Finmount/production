@@ -23,28 +23,23 @@ const TeamSection: React.FC = () => {
       role: 'Financial Analyst',
       qualifications: ['Part-Qualified ACCA', 'QFA', 'MSc Accounting and Finance',  'B.Com', 'M.Com'],
       experience: 'Specialization Cash Flow Analysis, Financial Reporting & Business Compliance',
-      bio: 'Nimisha Biju supports businesses through cash flow analysis, financial reporting, and compliance services. She assists clients in preparing cash flow forecasts, analysing financial information, and maintaining compliance with corporate and regulatory requirements.'
-    },
     {
       name: 'Edwin Thomson',
       role: 'Financial Analyst',
       qualifications: ['MSc Accounting and Finance Management'],
       experience: 'VAT Compliance, Income Tax & Financial Reporting',
-      bio: 'Edwin Thomson supports businesses with VAT compliance, income tax services, and financial reporting. He assists clients in maintaining accurate financial records, preparing financial information, and meeting their tax and regulatory obligations. His expertise includes VAT returns, income tax compliance, financial reporting, bookkeeping support, and management accounts.'
     },
     {
       name: 'Sona Susan Thomas',
       role: 'Accounts Assistant',
       qualifications: ['ACCA Part Qualified', 'Msc.Accounting and finance management'],
       experience: 'Credit Control, Account Reconciliation & Accounts Support',
-      bio: 'Sona Susan Thomas supports clients with credit control activities, account reconciliations, and accounting administration. She assists businesses in monitoring receivables, reconciling financial records, and maintaining accurate accounting information. Her expertise includes credit control, account reconciliation, payment tracking, and financial record maintenance.'
     },
     {
       name: 'Anna Mariya Saji',
       role: 'Accounts Assistant',
       qualifications: ['BCom','MSc Accounting and Finance','ACCA Part Qualified'],
       experience: 'Payroll Processing, Invoicing & Accounts Administration',
-      bio: 'Anna Maria Saji supports clients with payroll processing, invoicing, and accounts administration. She assists in maintaining payroll records, preparing invoices, processing financial documentation, and supporting day-to-day accounting functions. Her role helps ensure accurate financial administration, timely processing, and efficient record management for businesses across various sectors.'
     },
     {
       name: 'Maxon Thankachan',
@@ -54,7 +49,6 @@ const TeamSection: React.FC = () => {
         'M.A Accounting and Finance'
       ],
       experience: 'Business Research, Process Analysis & Operational Support',
-      bio: 'Maxon Thankachan supports business improvement initiatives through research, analysis, and operational support. He assists clients in reviewing business processes, gathering operational insights, and identifying opportunities to improve efficiency and effectiveness.'
     }
   ];
 
